@@ -1,0 +1,14 @@
+/*CURSOR taken from https://archivotrans.ar/*/
+cursor {
+  position: fixed;
+  left: -5px;
+  top: -5px;
+  padding: 10px;
+  background-image: url(images/uploads/sitio/cursor-amt-glow-50.png);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  touch-action: none;
+  z-index: 9999;
+}
