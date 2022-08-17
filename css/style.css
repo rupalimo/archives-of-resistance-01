@@ -113,7 +113,7 @@ header {
 }
 
 .marquee {
-  animation: marquee 112s infinite linear;
+  animation: marquee 136s infinite linear;
   padding: 0.125em 0;
   /* margin: 0.25em 0; */
   display: flex;
