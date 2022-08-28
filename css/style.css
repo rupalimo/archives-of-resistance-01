@@ -134,14 +134,14 @@ header {
 }
 
 .marquee {
-  animation: marquee 136s infinite linear;
+  animation: marquee 206s infinite linear;
   padding-bottom: 0.125em;
   /* margin: 0.25em 0; */
   display: flex;
   flex-direction: row;
   align-items: baseline;
   width: max-content;
-  animation-delay: -18s;
+  animation-delay: -20s;
   font-size: 1.5em;
   color: var(--white-color);
 }
