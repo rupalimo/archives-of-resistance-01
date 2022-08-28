@@ -1,33 +1,53 @@
-/* @font-face {
-  font-family: 'turret-road0-regular';
-  src: url('turretroad-regular_copy-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-} */
 @font-face {
   font-family: "CirrusCumulus";
-  src: url("CirrusCumulus.woff") format("woff");
+  src: url("../fonts/CirrusCumulus.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Authentic-Sans-90';
-  src: url('AUTHENTICSans-Condensed-90.woff2') format('woff2');
+  font-family: "Euripides SemiBold";
+  src: url("../fonts/Euripides-SemiBold_web.woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anthony';
+  src: url('../fonts/Anthony.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sequel 100 Wide 75";
+  src: url("../fonts/OGJ Type Design - Sequel 100 Wide 75.otf");
 }
 
 @font-face {
   font-family: 'Authentic-Sans-90-reg';
-  src: url('AUTHENTICSans-90.woff2') format('woff2');
+  src: url('../fonts/AUTHENTICSans-90.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Authentic-Sans-130-reg';
-  src: url('AUTHENTICSans-130.woff2') format('woff2');
+  src: url('../fonts/AUTHENTICSans-130.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-90';
+  src: url('../fonts/AUTHENTICSans-Condensed-90.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HalibutSerif';
+  src: url('../fonts/HalibutSerif-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,8 +65,9 @@
 :root {
   --primary-font: "Authentic-Sans-90-reg", "Helvetica", sans-serif;
   --primary-font-bold: "Authentic-Sans-130-reg", "Helvetica", sans-serif;
-  --secondary-font: "CirrusCumulus", "CooperLtBTWXX-Light", "Georgia", serif;
-  --AOR-font: "Authentic-Sans-90", "Helvetica", sans-serif;
+  --AOR-primary: "Sequel 100 Wide 75", "Helvetica", sans-serif;
+  --AOR-secondary: "HalibutSerif", "CirrusCumulus", serif;
+  --AOR-tertiary: "Authentic-Sans-90", "Anthony", serif;
   --text-color: #000;
   --white-color: #FFF;
   --purple-color: #7411ff;
@@ -97,10 +118,10 @@ body {
   background-color: var(--white-color);
 }
 
+/* MARQUEE ~~> top menu */
 header {
   display: flex;
   /* background-color: var(--purple-color); */
-  align-items: center;
   width: 100%;
   justify-content: center;
   flex-direction: column;
@@ -114,11 +135,10 @@ header {
 
 .marquee {
   animation: marquee 136s infinite linear;
-  padding: 0.125em 0;
+  padding-bottom: 0.125em;
   /* margin: 0.25em 0; */
   display: flex;
   flex-direction: row;
-  align-items: center;
   align-items: baseline;
   width: max-content;
   animation-delay: -18s;
@@ -128,20 +148,36 @@ header {
 
 .marquee:hover {
   animation-play-state: paused;
-  font-style: oblique;
+  /* font-style: oblique; */
   transition: 0.3s;
   padding-left: 5em;
 }
 
 .marquee p {
   margin: 0;
-  font-family: var(--AOR-font);
+  font-family: var(--AOR-primary);
 }
 
-.serif {
-  font-family: var(--secondary-font);
+.marquee em {
+  font-family: var(--AOR-secondary);
   font-style: normal;
   margin: 0 0.5em;
+  /* text-transform: lowercase; */
+}
+
+.marquee p+em {
+  font-size: 1.2em;
+}
+
+.marquee em+em {
+  font-family: var(--AOR-tertiary);
+  font-style: normal;
+  margin: 0.15em 0.5em 0 0;
+  border-radius: 100%;
+  border: 1px solid white;
+  padding: 0.15em 0.8em 0;
+  font-size: 0.8em;
+  align-self: center;
 }
 
 .bold {
@@ -169,6 +205,7 @@ nav a:hover {
   transition: 0.3s;
 }
 
+/* LANDING PAGE ~~> exhibition panel */
 .current-exhibition {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -266,4 +303,8 @@ a {
   grid-column: 2;
 }
 
+/* LANDING PAGE ~~> main */
+/* COLLABORATORS ~~> main */
+/* SCHEDULE ~~> main */
+/* MOBILE */
 @media (max-width: 465px) {
