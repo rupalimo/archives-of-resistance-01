@@ -62,6 +62,16 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 :root {
   --primary-font: "Authentic-Sans-90-reg", "Helvetica", sans-serif;
   --primary-font-bold: "Authentic-Sans-130-reg", "Helvetica", sans-serif;
@@ -84,16 +94,6 @@
   -ms-animation: var(--fade-in-effect);
   -o-animation: var(--fade-in-effect);
   animation: var(--fade-in-effect);
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100vw);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 ::selection {
