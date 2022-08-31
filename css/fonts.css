@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "CirrusCumulus";
+  src: url("../fonts/CirrusCumulus.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euripides SemiBold";
+  src: url("../fonts/Euripides-SemiBold_web.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anthony';
+  src: url('../fonts/Anthony.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sequel 100 Wide 75";
+  src: url("../fonts/OGJ Type Design - Sequel 100 Wide 75.otf");
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-90-reg';
+  src: url('../fonts/AUTHENTICSans-90.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-130-reg';
+  src: url('../fonts/AUTHENTICSans-130.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-90';
+  src: url('../fonts/AUTHENTICSans-Condensed-90.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HalibutSerif';
+  src: url('../fonts/HalibutSerif-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
