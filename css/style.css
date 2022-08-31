@@ -260,15 +260,15 @@ a {
 /* 00 LANDING PAGE */
 /* 01 COLLABORATORS */
 /* ~~> LEFT HAND KEY */
-main.collaborators {
+main.static-scroll {
   display: grid;
-  margin: 5em 0.5em;
+  margin: 4em 0.5em;
   grid-template-columns: 20vw 1fr;
   grid-gap: 1em;
   height: 100vh;
 }
 
-.collaborators aside {
+.static-scroll aside {
   grid-column: 1;
   display: flex;
   flex-direction: column;
@@ -280,9 +280,10 @@ main.collaborators {
   height: 100vh;
   overflow-y: scroll;
   font-size: 0.8em;
+  margin-top: 1em;
 }
 
-.collaborators aside a {
+.static-scroll aside a {
   height: fit-content;
   width: fit-content;
   border-radius: 1em;
@@ -290,24 +291,81 @@ main.collaborators {
   padding: 0.15em 0.5em 0 0.5em;
   margin: 0.075em 0.15em;
   color: var(--purple-color);
+  word-break: break-all;
 }
 
-.collaborators aside a:hover {
+.static-scroll aside a:hover {
   color: var(--white-color);
   transition: 0.3s;
   background-color: var(--purple-color);
 }
 
 /* ~~> RIGHT LONG SCROLL */
-.collaborators section {
+.static-scroll section {
   overflow-y: scroll;
   grid-column: 2;
 }
 
-.collaborators section article {
+.static-scroll section article {
   border-bottom: 1px solid var(--purple-color);
 }
 
-/* SCHEDULE ~~> main */
+/* 02 SCHEDULE */
+/* main.schedule {
+  margin: 4em 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+#schedule-link:hover {
+  transition: all 0.3s linear;
+  color: var(--purple-color);
+  pointer-events: none;
+}
+
+.event-listing:hover+.event-img {
+  opacity: 1;
+  transition: 0.15s;
+  color: var(--purple-color);
+  pointer-events: none;
+}
+
+.event-img {
+  opacity: 0;
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  max-width: 420px;
+  pointer-events: none;
+}
+
+.schedule .live-link {
+  background: linear-gradient(127deg, #191CFF, #7800FF, #FEBDFF);
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+  color: var(--white-color);
+  /* background-color: var(--purple-color); */
+  /* styling for live link */
+}
+
+/* 03 ABOUT */
+main.about {
+  margin: 4em 0.5em;
+}
+
+/* 04 CONTACT */
+main.contact {
+  margin: 4em 0.5em;
+}
+
+/* 05 ARCHIVE */
+main.archive {
+  margin: 4em 0.5em;
+}
+
 /* MOBILE */
 @media (max-width: 465px) {
+  /* collaborators / tags / overflow-y:scroll */
