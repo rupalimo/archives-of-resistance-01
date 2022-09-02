@@ -28,8 +28,9 @@
   --AOR-tertiary: "Authentic-Sans-90", "Anthony", serif;
   --text-color: #000;
   --white-color: #FFF;
+  --pink-color: #FEBDFF;
   --purple-color: #7411ff;
-  --lime-color: #;
+  --blue-color: #191CFF;
   --secondary-color: #35d8ea;
   --fade-in-effect: fadein 800ms;
   font-size: calc(1em + 0.5vw);
@@ -198,7 +199,7 @@ a {
   padding: 0.25em;
   display: grid;
   grid-template-columns: fit-content repeat(2, 1fr);
-  border-bottom: 1px dotted var(--purple-color);
+  border-bottom: 1px dotted var(--pink-color);
   grid-gap: 0.5em;
 }
 
@@ -262,7 +263,7 @@ a {
 /* ~~> LEFT HAND KEY */
 main.static-scroll {
   display: grid;
-  margin: 4em 0.5em;
+  margin: 4em 0.5em 2em 0.5em;
   grid-template-columns: 20vw 1fr;
   grid-gap: 1em;
   height: 100vh;
@@ -300,6 +301,11 @@ main.static-scroll {
   background-color: var(--purple-color);
 }
 
+.static-scroll aside a.active-tag {
+  color: var(--white-color);
+  background-color: var(--purple-color);
+}
+
 /* ~~> RIGHT LONG SCROLL */
 .static-scroll section {
   overflow-y: scroll;
@@ -307,16 +313,10 @@ main.static-scroll {
 }
 
 .static-scroll section article {
-  border-bottom: 1px solid var(--purple-color);
+  /* border-bottom: 1px solid var(--purple-color); */
 }
 
 /* 02 SCHEDULE */
-/* main.schedule {
-  margin: 4em 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 #schedule-link:hover {
   transition: all 0.3s linear;
   color: var(--purple-color);
@@ -334,7 +334,7 @@ main.static-scroll {
   opacity: 0;
   z-index: 1;
   position: fixed;
-  left: 50%;
+  left: 58%;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
   max-width: 420px;
@@ -352,18 +352,49 @@ main.static-scroll {
 }
 
 /* 03 ABOUT */
-main.about {
-  margin: 4em 0.5em;
-}
-
 /* 04 CONTACT */
-main.contact {
-  margin: 4em 0.5em;
+/* 05 ARCHIVE */
+.archive section {
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  grid-gap: 0.5em;
 }
 
-/* 05 ARCHIVE */
-main.archive {
-  margin: 4em 0.5em;
+.archive section article.description, .archive section article.gallery {
+  border-bottom: none;
+}
+
+.archive article.description {
+  grid-column: 1;
+  overflow-y: scroll;
+  width: 30vw;
+  border-right: 1px dotted var(--pink-color);
+  padding-right: 0.5em;
+}
+
+.archive article.gallery {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.archive article.gallery img {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.detail {
+  font-size: 0.65em;
+}
+
+.archive ul li::before {
+  content: "";
+}
+
+.archive ul {
+  padding: 0;
+  list-style: none;
 }
 
 /* MOBILE */
