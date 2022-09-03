@@ -46,14 +46,15 @@
 }
 
 ::selection {
-  /* color: var(--text-color-secondary);
-  background: var(--text-color); */
+  color: var(--white-color);
+  background: var(--purple-color);
 }
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  cursor: url(../cursor.cur) 6 6, auto;
 }
 
 html, body {
@@ -61,6 +62,7 @@ html, body {
   margin: 0;
   padding: 0;
   touch-action: manipulation;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -101,6 +103,7 @@ header {
   /* font-style: oblique; */
   transition: 0.3s;
   padding-left: 3em;
+  cursor: url(../hover.cur) 12 12, auto;
 }
 
 .marquee p {
@@ -158,6 +161,7 @@ nav a:hover {
   font-style: oblique;
   color: var(--purple-color);
   transition: 0.3s;
+  cursor: url(../hover.cur) 6 6, auto;
 }
 
 /* LANDING PAGE ~~> exhibition panel */
@@ -244,6 +248,7 @@ a {
 .current-exhibition img:hover {
   border-radius: 2em;
   transition: 0.3s;
+  cursor: url(../hover.cur) 6 6, auto;
 }
 
 .current-exhibition a p {
@@ -252,6 +257,7 @@ a {
 
 .current-exhibition a:hover {
   color: var(--purple-color);
+  cursor: url(../hover.cur) 6 6, auto;
 }
 
 .current-exhibition section {
@@ -299,9 +305,10 @@ main.static-scroll {
   color: var(--white-color);
   transition: 0.3s;
   background-color: var(--purple-color);
+  cursor: url(../hover.cur) 6 6, auto;
 }
 
-.static-scroll aside a.active-tag {
+.static-scroll aside a.active-tag, .static-scroll aside a:active {
   color: var(--white-color);
   background-color: var(--purple-color);
 }
@@ -317,10 +324,72 @@ main.static-scroll {
 }
 
 /* 02 SCHEDULE */
-#schedule-link:hover {
+div.schedule {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5em;
+  /* border-bottom: 1px dotted #FEBDFF; */
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.schedule p {
+  margin: 1em auto;
+}
+
+.schedule article img {
+  grid-column: 1;
+  width: 100%;
+}
+
+.schedule article div {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.schedule article h2, .schedule article h5, .schedule article p {
+  border-bottom: 1px dotted #FEBDFF;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.schedule article div span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+
+.schedule article h5 {}
+
+.schedule article h5+p {}
+
+.schedule article p+a {}
+
+.schedule article a+a {}
+
+.schedule .live-link {
+  background: linear-gradient(127deg, #191CFF, #7800FF, #FEBDFF);
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+  color: var(--white-color);
+}
+
+/* IMG ON HOVER */
+/* #schedule-link:hover {
   transition: all 0.3s linear;
   color: var(--purple-color);
   pointer-events: none;
+  cursor: url(../hover.cur) 6 6, auto;
 }
 
 .event-listing:hover+.event-img {
@@ -328,6 +397,7 @@ main.static-scroll {
   transition: 0.15s;
   color: var(--purple-color);
   pointer-events: none;
+  cursor: url(../hover.cur) 6 6, auto;
 }
 
 .event-img {
@@ -339,19 +409,18 @@ main.static-scroll {
   -webkit-transform: translateY(-50%) translateX(-50%);
   max-width: 420px;
   pointer-events: none;
-}
-
-.schedule .live-link {
-  background: linear-gradient(127deg, #191CFF, #7800FF, #FEBDFF);
-  background-size: 600% 100%;
-  animation: gradient 16s linear infinite;
-  animation-direction: alternate;
-  color: var(--white-color);
-  /* background-color: var(--purple-color); */
-  /* styling for live link */
-}
-
+} */
 /* 03 ABOUT */
+section.layout {
+  display: grid;
+  grid-template-columns: 1fr 20vw;
+  row-gap: 0;
+}
+
+section.layout+div {
+  grid-column: 1;
+}
+
 /* 04 CONTACT */
 /* 05 ARCHIVE */
 .archive section {
