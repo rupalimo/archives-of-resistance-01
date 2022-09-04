@@ -54,7 +54,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  cursor: url(../cursor.cur) 6 6, auto;
+  cursor: url(../cursor.cur) 12 12, auto;
 }
 
 html, body {
@@ -161,7 +161,7 @@ nav a:hover {
   font-style: oblique;
   color: var(--purple-color);
   transition: 0.3s;
-  cursor: url(../hover.cur) 6 6, auto;
+  cursor: url(../hover.cur) 12 12, auto;
 }
 
 /* LANDING PAGE ~~> exhibition panel */
@@ -248,7 +248,7 @@ a {
 .current-exhibition img:hover {
   border-radius: 2em;
   transition: 0.3s;
-  cursor: url(../hover.cur) 6 6, auto;
+  cursor: url(../hover.cur) 12 12, auto;
 }
 
 .current-exhibition a p {
@@ -257,7 +257,7 @@ a {
 
 .current-exhibition a:hover {
   color: var(--purple-color);
-  cursor: url(../hover.cur) 6 6, auto;
+  cursor: url(../hover.cur) 12 12, auto;
 }
 
 .current-exhibition section {
@@ -305,7 +305,7 @@ main.static-scroll {
   color: var(--white-color);
   transition: 0.3s;
   background-color: var(--purple-color);
-  cursor: url(../hover.cur) 6 6, auto;
+  cursor: url(../hover.cur) 12 12, auto;
 }
 
 .static-scroll aside a.active-tag, .static-scroll aside a:active {
