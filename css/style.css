@@ -265,7 +265,6 @@ a {
 }
 
 /* 00 LANDING PAGE */
-/* 01 COLLABORATORS */
 /* ~~> LEFT HAND KEY */
 main.static-scroll {
   display: grid;
@@ -321,6 +320,16 @@ main.static-scroll {
 
 .static-scroll section article {
   /* border-bottom: 1px solid var(--purple-color); */
+}
+
+/* 01 COLLABORATORS */
+.divider {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.divider img {
+  width: 75%;
 }
 
 /* 02 SCHEDULE */
