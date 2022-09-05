@@ -24,6 +24,7 @@
   --primary-font: "Authentic-Sans-90-reg", "Helvetica", sans-serif;
   --primary-font-bold: "Authentic-Sans-130-reg", "Helvetica", sans-serif;
   --AOR-primary: "Sequel 100 Wide 75", "Helvetica", sans-serif;
+  --AOR-quat: "Sequel 100 Wide 45", "Helvetica", sans-serif;
   --AOR-secondary: "HalibutSerif", "CirrusCumulus", serif;
   --AOR-tertiary: "Authentic-Sans-90", "Anthony", serif;
   --text-color: #000;
@@ -155,6 +156,10 @@ a {
 a.active {
   color: var(--purple-color);
   /* font-family: var(--primary-font-bold); */
+}
+
+hr {
+  border-top-color: var(--white-color);
 }
 
 nav a:hover {
@@ -323,9 +328,20 @@ main.static-scroll {
 }
 
 /* 01 COLLABORATORS */
+.collaborators p strong {
+  font-family: var(--AOR-quat);
+  color: var(--purple-color);
+}
+
+.collaborators p:nth-child(1) {
+  /* margin-bottom: 2em; */
+}
+
 .divider {
   display: flex;
   justify-content: flex-end;
+  padding: 0.25em;
+  margin-top: 2em;
 }
 
 .divider img {

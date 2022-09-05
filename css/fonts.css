@@ -25,6 +25,11 @@
 }
 
 @font-face {
+  font-family: "Sequel 100 Wide 45";
+  src: url("../fonts/OGJ Type Design - Sequel 100 Wide 45.otf");
+}
+
+@font-face {
   font-family: 'Authentic-Sans-90-reg';
   src: url('../fonts/AUTHENTICSans-90.woff2') format('woff2');
   font-weight: normal;
