@@ -426,6 +426,34 @@ div.CCC-gallery img:nth-child(3) {
   grid-row: 6;
 }
 
+.schedule article div.ML-gallery {
+  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(12, 8%);
+  grid-template-rows: repeat(12, 8%);
+}
+
+div.ML-gallery img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 0.25em;
+  filter: blur(0);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  margin-left: 1em;
+}
+
+div.ML-gallery img:nth-child(1):hover, div.ML-gallery img:nth-child(2):hover {
+  filter: blur(3px);
+  transition: all 0.3s linear;
+}
+
+div.ML-gallery img:nth-child(2) {
+  grid-column: 3;
+  grid-row: 8;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
 .schedule article h2, .schedule article h5, .schedule article p {
   border-bottom: 1px dotted #FEBDFF;
   margin: 0;
