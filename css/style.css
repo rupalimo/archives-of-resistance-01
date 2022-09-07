@@ -337,6 +337,10 @@ main.static-scroll {
   /* margin-bottom: 2em; */
 }
 
+.collaborators p:nth-child(2) {
+  text-align: center;
+}
+
 .divider {
   display: flex;
   justify-content: flex-end;
