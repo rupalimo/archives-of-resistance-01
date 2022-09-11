@@ -391,6 +391,15 @@ section.layout+div {
   justify-content: space-between;
 }
 
+.collaborators article span p {
+  max-width: 60%;
+  text-transform: uppercase;
+}
+
+.collaborators article span sup {
+  /* max-width: 50%; */
+}
+
 .collaborators article img {
   width: 50%;
   margin: 0 auto;
