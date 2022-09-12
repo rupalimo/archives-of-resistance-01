@@ -175,35 +175,6 @@ nav a:hover {
   cursor: url(../hover.cur) 12 12, auto;
 }
 
-/* LANDING PAGE ~~> exhibition panel */
-.current-exhibition {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding-top: 4em;
-}
-
-.current-exhibition aside {
-  grid-column: 1;
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid var(--purple-color);
-}
-
-h4 {
-  margin: 0;
-}
-
-.subtitle h4 {
-  text-align: center;
-  grid-column: 1;
-  font-size: 0.8em;
-  font-weight: normal;
-}
-
-.subtitle h4:first-child {
-  margin-top: 0.25em;
-}
-
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -223,6 +194,38 @@ strong {
   width: 60%;
 }
 
+.detail {
+  font-size: 0.65em;
+}
+
+/* LANDING PAGE ~~> exhibition panel */
+.current-exhibition {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 4em;
+}
+
+.current-exhibition aside {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--purple-color);
+}
+
+/* h4 {
+  margin: 0;
+}
+
+.subtitle h4 {
+  text-align: center;
+  grid-column: 1;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.subtitle h4:first-child {
+  margin-top: 0.25em;
+} */
 .current-exhibition a {
   margin: 0.25em;
   padding: 0.25em;
@@ -638,43 +641,7 @@ div.ML-gallery img:nth-child(2) {
 
 /* 04 CONTACT */
 /* 05 ARCHIVE */
-.archive section {
-  display: grid;
-  grid-template-columns: 1fr 20vw;
-  grid-gap: 0.5em;
-}
-
-.archive section article.description, .archive section article.gallery {
-  border-bottom: none;
-}
-
-.archive article.description {
-  grid-column: 1;
-  overflow-y: scroll;
-  /* width: 30vw; */
-  border-right: 1px dotted var(--pink-color);
-  padding-right: 0.5em;
-}
-
-.archive article.gallery {
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-}
-
-.archive article.gallery img {
-  width: 100%;
-  margin-top: 1em;
-}
-
-.detail {
-  font-size: 0.65em;
-}
-
-.archive ul li::before {
-  content: "";
-}
+.archive {}
 
 /* MOBILE */
 @media (max-width: 465px) {
