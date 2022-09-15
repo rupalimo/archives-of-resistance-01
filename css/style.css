@@ -21,12 +21,12 @@
 }
 
 :root {
-  --primary-font: "Authentic-Sans-90-reg", "Helvetica", sans-serif;
-  --primary-font-bold: "Authentic-Sans-130-reg", "Helvetica", sans-serif;
-  --AOR-primary: "Sequel 100 Wide 75", "Helvetica", sans-serif;
-  --AOR-quat: "Sequel 100 Wide 45", "Helvetica", sans-serif;
-  --AOR-secondary: "HalibutSerif", "CirrusCumulus", serif;
-  --AOR-tertiary: "Authentic-Sans-90", "Anthony", serif;
+  --body-text: "Authentic-Sans-90-reg", "Helvetica", sans-serif;
+  --body-text-bold: "Authentic-Sans-130-reg", "Helvetica", sans-serif;
+  --AOR-title: "Sequel 100 Wide 75", "Helvetica", sans-serif;
+  --AOR-subtitle: "HalibutSerif", "CirrusCumulus", serif;
+  --AOR-stamp: "Authentic-Sans-90", "Helvetica", sans-serif;
+  --AOR-nav: "Sequel 100 Wide 45", "Helvetica", sans-serif;
   --text-color: #000;
   --white-color: #FFF;
   --pink-color: #FEBDFF;
@@ -35,7 +35,7 @@
   --secondary-color: #35d8ea;
   --fade-in-effect: fadein 800ms;
   font-size: calc(1em + 0.5vw);
-  font-family: var(--primary-font);
+  font-family: var(--body-text);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -55,11 +55,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  cursor: url(../cursor.cur) 12 12, auto;
+  /* cursor: url(../cursor.cur) 12 12, auto; */
 }
 
 html, body {
-  font-family: var(--primary-font);
   margin: 0;
   padding: 0;
   touch-action: manipulation;
@@ -73,8 +72,8 @@ body {
 /* MARQUEE ~~> top menu */
 header {
   display: flex;
-  /* background-color: var(--purple-color); */
   width: 100%;
+  height: auto;
   justify-content: center;
   flex-direction: column;
   overflow-x: hidden;
@@ -89,7 +88,6 @@ header {
 .marquee {
   animation: marquee 206s infinite linear;
   padding-bottom: 0.125em;
-  /* margin: 0.25em 0; */
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -101,22 +99,20 @@ header {
 
 .marquee:hover {
   animation-play-state: paused;
-  /* font-style: oblique; */
+  color: var(--white-color);
   transition: 0.3s;
   padding-left: 3em;
-  cursor: url(../hover.cur) 12 12, auto;
 }
 
 .marquee p {
   margin: 0;
-  font-family: var(--AOR-primary);
+  font-family: var(--AOR-title);
 }
 
 .marquee em {
-  font-family: var(--AOR-secondary);
+  font-family: var(--AOR-subtitle);
   font-style: normal;
   margin: 0 0.5em;
-  /* text-transform: lowercase; */
 }
 
 .marquee p+em {
@@ -124,7 +120,7 @@ header {
 }
 
 .marquee em+em {
-  font-family: var(--AOR-tertiary);
+  font-family: var(--AOR-stamp);
   font-style: normal;
   margin: 0.15em 0.7em 0 0;
   border-radius: 100%;
@@ -134,28 +130,35 @@ header {
   align-self: center;
 }
 
-.bold {
-  font-family: var(--primary-font-bold);
-}
-
-nav {
+header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.5em 0.15em 0.5em;
   border-bottom: 1px solid var(--purple-color);
   background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+header nav img {
+  width: 0.8em;
+  height: auto;
+}
+
+a.active {
+  color: var(--text-color);
+}
+
+a:hover {
+  font-style: oblique;
+  color: var(--purple-color);
+  transition: 0.3s;
 }
 
 a {
   text-decoration: none;
   color: var(--text-color);
-}
-
-a.active {
-  color: var(--purple-color);
-  /* font-family: var(--primary-font-bold); */
 }
 
 hr {
@@ -166,18 +169,6 @@ hr {
 ul {
   padding: 0;
   list-style: none;
-}
-
-nav a:hover {
-  font-style: oblique;
-  color: var(--purple-color);
-  transition: 0.3s;
-  cursor: url(../hover.cur) 12 12, auto;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text-color);
 }
 
 strong {
@@ -198,8 +189,50 @@ strong {
   font-size: 0.65em;
 }
 
-/* LANDING PAGE ~~> exhibition panel */
-.current-exhibition {
+.bold {
+  font-family: var(--body-text-bold);
+}
+
+/* LANDING PAGE ~~> LEFT COLUMN */
+.landing-page aside {
+  border-right: 1px groove var(--purple-color);
+}
+
+/* LANDING PAGE ~~> MAIN COLUMN */
+.landing-page section.layout div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1em;
+}
+
+.landing-page section.layout div:nth-child(1) span {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--purple-color);
+  border-bottom: 1px solid var(--purple-color);
+}
+
+/* LANDING PAGE ~~> RIGHT COLUMN */
+.landing-page section.layout div+div {
+  border-left: 1px solid var(--purple-color);
+  padding-left: 1em;
+}
+
+.landing-page section.layout div:nth-child(2) article h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page section.layout div:nth-child(2) article h1 img+img {
+  width: 100%;
+  margin: 0.25em 0;
+}
+
+/* LANDING PAGE ~~> GALLERY SCROLL */
+/* .current-exhibition {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding-top: 4em;
@@ -212,20 +245,6 @@ strong {
   border-right: 1px solid var(--purple-color);
 }
 
-/* h4 {
-  margin: 0;
-}
-
-.subtitle h4 {
-  text-align: center;
-  grid-column: 1;
-  font-size: 0.8em;
-  font-weight: normal;
-}
-
-.subtitle h4:first-child {
-  margin-top: 0.25em;
-} */
 .current-exhibition a {
   margin: 0.25em;
   padding: 0.25em;
@@ -242,7 +261,7 @@ strong {
 .current-exhibition p:first-child {
   grid-row: 1 / 6;
   grid-column: 1;
-  /* color: var(--lime-color); */
+
 }
 
 .current-exhibition p:nth-child(3) {
@@ -260,7 +279,7 @@ strong {
 
 .current-exhibition sup+p {
   grid-row: 5;
-  /* grid-column: 2; */
+
 }
 
 .current-exhibition p:last-child {
@@ -276,7 +295,7 @@ strong {
 .current-exhibition img:hover {
   border-radius: 2em;
   transition: 0.3s;
-  cursor: url(../hover.cur) 12 12, auto;
+
 }
 
 .current-exhibition a p {
@@ -285,14 +304,13 @@ strong {
 
 .current-exhibition a:hover {
   color: var(--purple-color);
-  cursor: url(../hover.cur) 12 12, auto;
+
 }
 
 .current-exhibition section {
   grid-column: 2;
-}
-
-/* 00 LANDING PAGE */
+} */
+/* 00 PAGE LAYOUT */
 /* ~~> LEFT HAND KEY */
 main.static-scroll {
   display: grid;
@@ -332,7 +350,7 @@ main.static-scroll {
   color: var(--white-color);
   transition: 0.3s;
   background-color: var(--purple-color);
-  cursor: url(../hover.cur) 12 12, auto;
+  /* cursor: url(../hover.cur) 12 12, auto; */
 }
 
 .static-scroll aside a.active-tag, .static-scroll aside a:active {
@@ -627,16 +645,16 @@ div.ML-gallery img:nth-child(2) {
   /* width: calc(12em + 0.5vw); */
 }
 
-.about-footer {
-  padding-top: 2em;
+footer {
   border-top: 1px dotted var(--pink-color);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
 }
 
-.about-footer h4 {
+footer h4 {
   font-size: 0.8em;
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 /* 04 CONTACT */
