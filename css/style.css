@@ -147,7 +147,7 @@ header nav img {
 }
 
 a.active {
-  color: var(--text-color);
+  color: var(--purple-color);
 }
 
 a:hover {
@@ -195,14 +195,18 @@ strong {
 
 /* LANDING PAGE ~~> LEFT COLUMN */
 .landing-page aside {
-  border-right: 1px groove var(--purple-color);
+  border-right: 1px dotted var(--purple-color);
 }
 
 /* LANDING PAGE ~~> MAIN COLUMN */
 .landing-page section.layout div:nth-child(1) {
   display: flex;
   flex-direction: column;
-  padding-right: 1em;
+  padding-right: 0.5em;
+}
+
+.landing-page section.layout div:nth-child(1) img {
+  width: 100%;
 }
 
 .landing-page section.layout div:nth-child(1) span {
@@ -211,24 +215,48 @@ strong {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--purple-color);
-  border-bottom: 1px solid var(--purple-color);
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
 .landing-page section.layout div+div {
-  border-left: 1px solid var(--purple-color);
-  padding-left: 1em;
+  border-left: 1px dotted var(--purple-color);
+  padding-left: 0.5em;
 }
 
 .landing-page section.layout div:nth-child(2) article h1 {
   display: flex;
   flex-direction: column;
+  margin-top: 0.5em;
 }
 
 .landing-page section.layout div:nth-child(2) article h1 img+img {
   width: 100%;
   margin: 0.25em 0;
+}
+
+.landing-page section.layout div:nth-child(2) article ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+}
+
+.landing-page section.layout div:nth-child(2) article li {
+  /* border-bottom: 1px dotted var(--pink-color); */
+  border: 2px outset var(--pink-color);
+  /* border-radius: 1em; */
+  padding: 0.5em 0.5em 0.35em 0.5em;
+  margin: 0.075em 0.15em;
+  /* margin-bottom: 1em; */
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  height: 0.25em;
+  width: 100vw;
+  background-color: var(--purple-color);
 }
 
 /* LANDING PAGE ~~> GALLERY SCROLL */
@@ -316,7 +344,7 @@ main.static-scroll {
   display: grid;
   margin: 4em 0.5em 2em 0.5em;
   grid-template-columns: 20vw 1fr;
-  grid-gap: 1em;
+  grid-gap: 0.5em;
   height: 100vh;
 }
 
@@ -353,7 +381,7 @@ main.static-scroll {
   /* cursor: url(../hover.cur) 12 12, auto; */
 }
 
-.static-scroll aside a.active-tag, .static-scroll aside a:active {
+.static-scroll aside a.active-tag {
   color: var(--white-color);
   background-color: var(--purple-color);
 }
@@ -645,13 +673,13 @@ div.ML-gallery img:nth-child(2) {
   /* width: calc(12em + 0.5vw); */
 }
 
-footer {
+.about .layout div article {
   border-top: 1px dotted var(--pink-color);
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
-footer h4 {
+.about .layout div article h4 {
   font-size: 0.8em;
   font-weight: normal;
   margin-bottom: 0;
