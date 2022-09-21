@@ -195,20 +195,11 @@ strong {
 
 /* LANDING PAGE LAYOUT */
 .landing-page aside, .landing-page section, .landing-page article {
-  position: absolute;
-  top: 4em;
-  /* bottom: 0; */
-  height: 100vh;
-  overflow: scroll;
-  padding: 0 0.5em;
-  z-index: -1;
-}
-
-.landing-page section {
   position: fixed;
   top: 4em;
   /* bottom: 0; */
   height: 100vh;
+  overflow: scroll;
   padding: 0 0.5em;
   z-index: -1;
 }
@@ -226,6 +217,10 @@ strong {
 .landing-page article {
   width: 20vw;
   right: 0;
+}
+
+.landing-page #extra {
+  margin-bottom: 6em;
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
