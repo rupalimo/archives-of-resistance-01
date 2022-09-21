@@ -194,22 +194,43 @@ strong {
 }
 
 /* LANDING PAGE ~~> LEFT COLUMN */
+.landing-page aside, .landing-page section, .landing-page article {
+  position: absolute;
+  top: 4em;
+  /* bottom: 0; */
+  /* height: 100vh; */
+  overflow: scroll;
+  padding: 0 0.5em;
+  z-index: -1;
+}
+
 .landing-page aside {
-  border-right: 1px dotted var(--purple-color);
+  width: 20vw;
+  left: 0;
+}
+
+.landing-page section {
+  width: 60vw;
+  right: 20vw;
+}
+
+.landing-page article {
+  width: 20vw;
+  right: 0;
 }
 
 /* LANDING PAGE ~~> MAIN COLUMN */
-.landing-page section.layout div:nth-child(1) {
+.landing-page section div {
   display: flex;
   flex-direction: column;
-  padding-right: 0.5em;
+  /* padding-right: 0.5em; */
 }
 
-.landing-page section.layout div:nth-child(1) img {
+.landing-page section div img {
   width: 100%;
 }
 
-.landing-page section.layout div:nth-child(1) span {
+.landing-page section div span {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -218,30 +239,30 @@ strong {
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
-.landing-page section.layout div+div {
+.landing-page section {
   border-left: 1px dotted var(--purple-color);
-  padding-left: 0.5em;
+  border-right: 1px dotted var(--purple-color);
 }
 
-.landing-page section.layout div:nth-child(2) article h1 {
+.landing-page article h1 {
   display: flex;
   flex-direction: column;
   margin-top: 0.5em;
 }
 
-.landing-page section.layout div:nth-child(2) article h1 img+img {
+.landing-page article h1 img+img {
   width: 100%;
   margin: 0.25em 0;
 }
 
-.landing-page section.layout div:nth-child(2) article ul {
+.landing-page article ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-bottom: 1em;
+  /* padding-bottom: 1em; */
 }
 
-.landing-page section.layout div:nth-child(2) article li {
+.landing-page article li {
   /* border-bottom: 1px dotted var(--pink-color); */
   border: 2px outset var(--pink-color);
   /* border-radius: 1em; */
@@ -251,12 +272,16 @@ strong {
 }
 
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 0.25em;
   width: 100vw;
-  background-color: var(--purple-color);
+  background: linear-gradient(127deg, #191CFF, #7800FF, #FEBDFF);
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+  z-index: 1;
 }
 
 /* LANDING PAGE ~~> GALLERY SCROLL */
