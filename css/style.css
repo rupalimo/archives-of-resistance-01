@@ -220,10 +220,33 @@ strong {
 }
 
 .landing-page #extra {
-  margin-bottom: 6em;
+  margin-bottom: 7em;
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
+.landing-page aside div {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: 1px dotted var(--pink-color);
+}
+
+.landing-page aside div sup {
+  width: 100%;
+}
+
+.landing-page aside div span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.landing-page aside div p, .landing-page aside div h5 {
+  margin: 0;
+}
+
 /* LANDING PAGE ~~> MAIN COLUMN */
 .landing-page div img {
   width: 100%;
@@ -251,6 +274,10 @@ strong {
 .landing-page section div strong {
   font-family: var(--AOR-subtitle);
   font-size: 1.3em;
+}
+
+.landing-page section p.detail {
+  text-align: center;
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
