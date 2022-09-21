@@ -193,13 +193,22 @@ strong {
   font-family: var(--body-text-bold);
 }
 
-/* LANDING PAGE ~~> LEFT COLUMN */
+/* LANDING PAGE LAYOUT */
 .landing-page aside, .landing-page section, .landing-page article {
   position: absolute;
   top: 4em;
   /* bottom: 0; */
   height: 100vh;
   overflow: scroll;
+  padding: 0 0.5em;
+  z-index: -1;
+}
+
+.landing-page section {
+  position: fixed;
+  top: 4em;
+  /* bottom: 0; */
+  height: 100vh;
   padding: 0 0.5em;
   z-index: -1;
 }
@@ -219,31 +228,37 @@ strong {
   right: 0;
 }
 
-/* LANDING PAGE ~~> MAIN COLUMN */
-.landing-page section div {
-  display: flex;
-  flex-direction: column;
-  /* padding-right: 0.5em; */
-}
-
-.landing-page section div img {
-  width: 100%;
-}
-
-.landing-page section div span {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* LANDING PAGE ~~> RIGHT COLUMN */
+/* LANDING PAGE ~~> MAIN COLUMN */
+.landing-page div img {
+  width: 100%;
+}
+
 .landing-page section {
   border-left: 1px dotted var(--purple-color);
   border-right: 1px dotted var(--purple-color);
 }
 
+.landing-page section div {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page section div span {
+  vertical-align: baseline;
+}
+
+.landing-page section div span img {
+  width: 3em;
+  margin-right: 0.3em;
+}
+
+.landing-page section div strong {
+  font-family: var(--AOR-subtitle);
+  font-size: 1.3em;
+}
+
+/* LANDING PAGE ~~> RIGHT COLUMN */
 .landing-page article h1 {
   display: flex;
   flex-direction: column;
@@ -654,33 +669,14 @@ div.ML-gallery img:nth-child(2) {
   color: var(--white-color);
 }
 
-/* IMG ON HOVER */
-/* #schedule-link:hover {
-  transition: all 0.3s linear;
-  color: var(--purple-color);
-  pointer-events: none;
-  cursor: url(../hover.cur) 6 6, auto;
-}
-
-.event-listing:hover+.event-img {
-  opacity: 1;
-  transition: 0.15s;
-  color: var(--purple-color);
-  pointer-events: none;
-  cursor: url(../hover.cur) 6 6, auto;
-}
-
-.event-img {
-  opacity: 0;
-  z-index: 1;
-  position: fixed;
-  left: 58%;
-  top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  max-width: 420px;
-  pointer-events: none;
-} */
 /* 03 ABOUT */
+/* remove to add vertical scroll */
+.about section {
+  position: fixed;
+  right: 20vw;
+  width: 60vw;
+}
+
 .about aside:first-of-type {
   z-index: -1;
   width: 100vw;
