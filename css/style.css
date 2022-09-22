@@ -223,7 +223,7 @@ strong {
   margin-bottom: 7em;
 }
 
-/* LANDING PAGE ~~> RIGHT COLUMN */
+/* LANDING PAGE ~~> LEFT COLUMN */
 .landing-page aside img {
   width: -webkit-fill-available;
   margin: 0.5em 0;
@@ -296,13 +296,16 @@ strong {
   flex-direction: column;
 }
 
+.landing-page section div+img {
+  padding: 1em;
+}
+
 .landing-page section div span {
   vertical-align: baseline;
 }
 
 .landing-page section div span img {
-  width: 3em;
-  margin-right: 0.3em;
+  width: 100%;
 }
 
 .landing-page section div strong {
