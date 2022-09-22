@@ -136,7 +136,7 @@ header nav {
   justify-content: space-between;
   width: 100%;
   padding: 0.25em 0.5em 0.15em 0.5em;
-  border-bottom: 1px solid var(--purple-color);
+  border-bottom: 2px inset var(--purple-color);
   background-color: var(--white-color);
   color: var(--text-color);
 }
@@ -224,16 +224,45 @@ strong {
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
+.landing-page aside img {
+  width: -webkit-fill-available;
+  margin: 0.5em 0;
+}
+
+.landing-page aside {
+  display: flex;
+  flex-direction: column;
+}
+
 .landing-page aside div {
   padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border-bottom: 1px dotted var(--pink-color);
 }
 
 .landing-page aside div sup {
-  width: 100%;
+  text-align: center;
+  margin: 0.5em 0;
+  font-family: var(--AOR-subtitle);
+  border-radius: 100%;
+  border: 1px solid var(--text-color);
+  width: 3em;
+  padding-bottom: 0.15em;
+  align-self: center;
+}
+
+.landing-page aside div a {
+  margin: 0.5em 0;
+}
+
+.landing-page aside div a strong {
+  color: inherit;
+  font-weight: bold;
+}
+
+.landing-page aside div a:hover {
+  color: var(--purple-color);
 }
 
 .landing-page aside div span {
@@ -241,6 +270,11 @@ strong {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.landing-page aside div span+span {
+  border-top: 1px dotted var(--pink-color);
+  padding-top: 0.15em;
 }
 
 .landing-page aside div p, .landing-page aside div h5 {
@@ -333,6 +367,7 @@ footer {
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
   z-index: 1;
+  box-shadow: -2px -2px 10px #565656;
 }
 
 /* LANDING PAGE ~~> GALLERY SCROLL */
