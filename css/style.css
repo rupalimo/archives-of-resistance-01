@@ -776,16 +776,8 @@ div.ML-gallery img:nth-child(2) {
   /* width: calc(12em + 0.5vw); */
 }
 
-.about .layout div article {
-  border-top: 1px dotted var(--pink-color);
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.about .layout div article h4 {
-  font-size: 0.8em;
-  font-weight: normal;
-  margin-bottom: 0;
+.about div p:last-of-type {
+  margin-top: 4em;
 }
 
 /* 04 CONTACT */
