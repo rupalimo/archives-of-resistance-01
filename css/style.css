@@ -189,6 +189,10 @@ strong {
   font-size: 0.65em;
 }
 
+.medium {
+  font-size: 0.85em;
+}
+
 .bold {
   font-family: var(--body-text-bold);
 }
@@ -567,6 +571,10 @@ section.layout+div {
 .collaborators article:nth-child(3) img {}
 
 /* 02 SCHEDULE */
+main aside a sup {
+  font-family: var(--AOR-subtitle);
+}
+
 div.schedule {
   display: flex;
   flex-direction: column;
