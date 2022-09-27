@@ -541,6 +541,7 @@ section.layout+div {
   border: 2px outset var(--pink-color);
   padding: 1em;
   border-radius: 1em;
+  background-color: #febdff0f;
 }
 
 .collaborators article:nth-of-type(5), .collaborators article:nth-of-type(6), .collaborators article:nth-of-type(5), .collaborators article:nth-of-type(8), .collaborators article:nth-of-type(5), .collaborators article:last-of-type {
@@ -550,8 +551,7 @@ section.layout+div {
 .collaborators article img {
   width: 50%;
   margin: 0 auto;
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
-  box-shadow: -2px -2px #cdc2d9ab;
+  box-shadow: 2px 2px #ffbce4ab;
   border-radius: 1em;
 }
 
@@ -580,6 +580,13 @@ main aside a sup {
   font-family: var(--AOR-subtitle);
 }
 
+/* LIVE LINK STYLING */
+/* main aside a sup.live {
+    color: var(--white-color);
+    background: linear-gradient(45deg, #191CFF, #7800FF, #FEBDFF);
+    background-size: 600% 120%;
+    animation: gradient 6s linear infinite;
+    animation-direction: alternate; } */
 div.schedule {
   display: flex;
   flex-direction: column;
