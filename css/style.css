@@ -97,13 +97,13 @@ header {
 }
 
 .marquee {
-  animation: marquee 206s infinite linear;
+  animation: marquee 305s infinite linear;
   padding-bottom: 0.125em;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   width: max-content;
-  animation-delay: -20s;
+  animation-delay: -30s;
   font-size: 1.5em;
   color: var(--white-color);
 }
@@ -347,8 +347,18 @@ strong {
   font-size: 1.3em;
 }
 
-.landing-page section p.detail {
-  text-align: center;
+.landing-page section p+div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page section p+div img {
+  margin: 0 1em;
+  width: 20%;
+  height: fit-content;
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
@@ -572,6 +582,7 @@ div.schedule {
   display: grid;
   grid-template-columns: repeat(12, 6%);
   grid-template-rows: repeat(12, 8%);
+  z-index: -1;
 }
 
 div.JD-gallery img:nth-child(1) {
@@ -623,6 +634,7 @@ div.trans-gallery img:nth-child(3) {
   display: grid;
   grid-template-columns: repeat(12, 6%);
   grid-template-rows: repeat(8, 12%);
+  z-index: -1;
 }
 
 div.CCC-gallery img:hover {
@@ -645,6 +657,7 @@ div.CCC-gallery img:nth-child(3) {
   display: grid;
   grid-template-columns: repeat(12, 8%);
   grid-template-rows: repeat(12, 8%);
+  z-index: -1;
 }
 
 div.ML-gallery img:nth-child(1) {
