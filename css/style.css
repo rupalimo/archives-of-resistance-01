@@ -580,7 +580,7 @@ div.schedule {
   display: grid;
   grid-template-columns: repeat(12, 6%);
   grid-template-rows: repeat(12, 8%);
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 div.JD-gallery img:nth-child(1) {
@@ -632,11 +632,16 @@ div.trans-gallery img:nth-child(3) {
   display: grid;
   grid-template-columns: repeat(12, 6%);
   grid-template-rows: repeat(8, 12%);
-  z-index: -1;
+  /* z-index: -1; */
+}
+
+div.CCC-gallery img {
+  border: 1px solid var(--white-color);
 }
 
 div.CCC-gallery img:hover {
   z-index: 1;
+  border: 1px dotted var(--white-color);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
@@ -655,7 +660,7 @@ div.CCC-gallery img:nth-child(3) {
   display: grid;
   grid-template-columns: repeat(12, 8%);
   grid-template-rows: repeat(12, 8%);
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 div.ML-gallery img:nth-child(1) {
