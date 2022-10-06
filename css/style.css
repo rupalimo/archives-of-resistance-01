@@ -316,7 +316,7 @@ strong {
 }
 
 /* LANDING PAGE ~~> MAIN COLUMN */
-.landing-page div img {
+.landing-page div img, .landing-page video {
   width: 100%;
 }
 
