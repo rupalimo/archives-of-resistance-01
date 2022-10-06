@@ -193,7 +193,7 @@ strong {
 }
 
 .divider img {
-  width: 60%;
+  width: 100%;
 }
 
 .detail {
@@ -496,11 +496,9 @@ section.layout+div {
 .collaborators article {
   display: flex;
   flex-direction: column;
-  /* border-bottom: 1px dotted var(--pink-color); */
-  padding-bottom: 2em;
-  margin-top: 2em;
+  margin: 1em 0;
   border: 2px outset var(--pink-color);
-  padding: 1em;
+  padding: 1em 1em 2em 1em;
   border-radius: 1em;
   background-color: #febdff0f;
 }
