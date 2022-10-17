@@ -371,7 +371,6 @@ strong {
 .landing-page section p+div img {
   margin: 0 1em;
   width: 20%;
-  height: fit-content;
 }
 
 /* LANDING PAGE ~~> RIGHT COLUMN */
@@ -891,14 +890,12 @@ main.placeholder-exhibition div+div {
   div.schedule .trans-gallery img, div.schedule .JD-gallery img, div.schedule .LM-gallery img, div.schedule .CCC-gallery img {
     width: -webkit-fill-available;
     width: 100%;
-    height: fit-content;
     padding: 1em;
   }
 
   div.ML-gallery img:nth-child(1) {
     width: -webkit-fill-available;
     width: 100%;
-    height: fit-content;
     margin: 0;
     padding: 1em;
     box-shadow: none;
