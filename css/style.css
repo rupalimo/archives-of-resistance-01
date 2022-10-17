@@ -850,27 +850,6 @@ main.placeholder-exhibition img {
   width: 40vw;
 }
 
-main.placeholder-exhibition img+div {
-  margin-top: 0.25em;
-}
-
-main.placeholder-exhibition div, main.placeholder-exhibition div a {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 40vw;
-}
-
-main.placeholder-exhibition div h5, main.placeholder-exhibition div p {
-  margin: 0.5em 0;
-}
-
-main.placeholder-exhibition div+div {
-  border-top: 1px solid var(--purple-color);
-  padding-top: 0.25em;
-}
-
 /* RESPONSIVE SPECS */
 /* <1280 */
 @media (max-width: 1280px) {
@@ -995,7 +974,7 @@ main.placeholder-exhibition div+div {
     display: none;
   }
 
-  a.placeholder-AOR, main.placeholder-exhibition div, main.placeholder-exhibition div a, main.placeholder-exhibition img {
+  a.placeholder-AOR, main.placeholder-exhibition img {
     width: 98vw;
   }
 
@@ -1023,7 +1002,7 @@ main.placeholder-exhibition div+div {
     width: 150%;
   }
 
-  /* ABOUT */
+  /* ~~> ABOUT */
   .about section {
     padding: 0 1em;
     s
@@ -1041,7 +1020,7 @@ main.placeholder-exhibition div+div {
     margin-left: 15%;
   }
 
-  /* EXHIBITION SCHEDULE */
+  /* ~~> EXHIBITION SCHEDULE */
   main.static-scroll section div.schedule {
     padding: 0 0.5em;
   }
@@ -1060,7 +1039,7 @@ main.placeholder-exhibition div+div {
     width: 150%;
   }
 
-  /* ARCHIVE */
+  /* ~~> ARCHIVE */
   .archive div {
     position: static;
     padding: 0 1em;
