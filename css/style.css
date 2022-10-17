@@ -301,7 +301,7 @@ strong {
   text-align: right;
 }
 
-.landing-page aside div span a.live-link {
+.landing-page aside div span a.live-link, .schedule article div span a.live-link {
   color: var(--purple-color);
 }
 
@@ -969,6 +969,10 @@ main.placeholder-exhibition div+div {
     padding: 0 1em;
   }
 
+  .landing-page section p+div img {
+    width: 30%;
+  }
+
   /* ~~> PLACEHOLDER EXHIBTION PAGE */
   main.placeholder-exhibition {
     justify-content: flex-start;
@@ -977,14 +981,18 @@ main.placeholder-exhibition div+div {
 
   a.placeholder-AOR {
     margin: 0.25em 0;
-    border: none;
-    border-radius: 0;
+    border-color: var(--purple-color);
+    border-radius: 1em;
     color: var(--purple-color);
-    padding: 0.25em 0;
+    padding: 0 0.5em 0.15em
   }
 
   a.placeholder-AOR p+em {
     margin-top: 0.35em;
+  }
+
+  a.placeholder-AOR em+em {
+    display: none;
   }
 
   a.placeholder-AOR, main.placeholder-exhibition div, main.placeholder-exhibition div a, main.placeholder-exhibition img {
