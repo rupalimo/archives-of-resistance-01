@@ -806,7 +806,6 @@ main.placeholder-exhibition {
 }
 
 a.placeholder-AOR:hover {
-  font-style: normal;
   border: 1px solid var(--purple-color);
   cursor: grab;
 }
@@ -814,7 +813,6 @@ a.placeholder-AOR:hover {
 a.placeholder-AOR {
   border: 1px solid var(--text-color);
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   align-items: baseline;
   flex-wrap: wrap;
@@ -822,7 +820,6 @@ a.placeholder-AOR {
   padding: 0 0.5em;
   font-size: 0.85em;
   margin: 1em 0;
-  width: 40vw;
 }
 
 a.placeholder-AOR p {
@@ -831,19 +828,11 @@ a.placeholder-AOR p {
 }
 
 a.placeholder-AOR em {
-  font-family: var(--AOR-subtitle);
-  font-style: normal;
-}
-
-a.placeholder-AOR p+em {
   font-size: 1.2em;
   font-family: var(--AOR-stamp);
   font-style: normal;
   font-size: 0.95em;
-}
-
-a.placeholder-AOR em+em {
-  font-size: 1.2em;
+  margin-right: 0.5em;
 }
 
 main.placeholder-exhibition img {
@@ -956,6 +945,7 @@ main.placeholder-exhibition img {
   main.placeholder-exhibition {
     justify-content: flex-start;
     padding: 0;
+    margin-top: 1em;
   }
 
   a.placeholder-AOR {
@@ -966,16 +956,13 @@ main.placeholder-exhibition img {
     padding: 0 0.5em 0.15em
   }
 
-  a.placeholder-AOR p+em {
+  a.placeholder-AOR {
     margin-top: 0.35em;
-  }
-
-  a.placeholder-AOR em+em {
-    display: none;
+    padding-top: 0.15em;
   }
 
   a.placeholder-AOR, main.placeholder-exhibition img {
-    width: 98vw;
+    width: 90vw;
   }
 
   /* ~~> SECONDARY PAGE LAYOUT */
