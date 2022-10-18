@@ -820,6 +820,7 @@ a.placeholder-AOR {
   padding: 0 0.5em;
   font-size: 0.85em;
   margin: 1em 0;
+  justify-content: space-between;
 }
 
 a.placeholder-AOR p {
@@ -835,7 +836,7 @@ a.placeholder-AOR em {
   margin-right: 0.5em;
 }
 
-main.placeholder-exhibition img {
+main.placeholder-exhibition img, a.placeholder-AOR {
   width: 40vw;
 }
 
