@@ -333,6 +333,10 @@ strong {
   width: 100%;
 }
 
+#AOR-gif {
+  display: none;
+}
+
 .landing-page section {
   border-left: 1px dotted var(--purple-color);
   border-right: 1px dotted var(--purple-color);
@@ -836,7 +840,7 @@ a.placeholder-AOR em {
   margin-right: 0.5em;
 }
 
-main.placeholder-exhibition img, a.placeholder-AOR {
+main.placeholder-exhibition a img, a.placeholder-AOR {
   width: 40vw;
 }
 
@@ -940,6 +944,14 @@ main.placeholder-exhibition img, a.placeholder-AOR {
 
   .landing-page section p+div img {
     width: 30%;
+  }
+
+  .landing-page video {
+    display: none;
+  }
+
+  #AOR-gif {
+    display: block;
   }
 
   /* ~~> PLACEHOLDER EXHIBTION PAGE */
