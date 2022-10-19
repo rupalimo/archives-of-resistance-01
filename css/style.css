@@ -333,7 +333,7 @@ strong {
   width: 100%;
 }
 
-#AOR-gif {
+.landing-page div img#AOR-gif {
   display: none;
 }
 
@@ -950,8 +950,9 @@ main.placeholder-exhibition a img, a.placeholder-AOR {
     display: none;
   }
 
-  #AOR-gif {
+  .landing-page div img#AOR-gif {
     display: block;
+    width: 100%;
   }
 
   /* ~~> PLACEHOLDER EXHIBTION PAGE */
