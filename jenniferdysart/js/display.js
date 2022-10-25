@@ -36,13 +36,6 @@ $.getJSON("https://api.ipify.org?format=json", function (data) {
     $("#ipDisplay").html(data.ip);
 })
 
-// cursor position display
-
-function getCursorPosition(event) {
-    document.getElementById("cursor-position-x").textContent = event.clientX;
-    document.getElementById("cursor-position-y").textContent = event.clientY;
-}
-
 // background toggle
 function changeBackgroundImage(bgImage) {
     document.body.style.backgroundImage = "url(" + bgImage + ")";
