@@ -159,7 +159,7 @@ input:hover {
     width: 120px;
 }
 
-@media screen and (max-width: 260px){
+@media screen and (max-width: 260px) {
     .video-player button {
         padding-right: calc(31% - 8vh);
     }
@@ -272,6 +272,7 @@ li.item-link div {
         right: 3vh;
     }
 }
+
 @media screen and (max-width: 900px) {
     .brimming {
         display: block;
@@ -299,6 +300,8 @@ li.item-link div {
     li.item-link div {
         width: 100%;
         margin: 1em;
+        height: 100vh;
+        overflow-y: scroll;
     }
 
     .show img {
