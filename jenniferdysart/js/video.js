@@ -1,7 +1,7 @@
 /* Get our elements */
 var brimmingVideo = document.querySelector('#brimming .video-player video');
-var brimmingFullscreen = document.querySelector('#brimming .video-player button');
-var brimmingIcon = document.querySelector('#brimming .video-player button img');
+var brimmingFullscreen = document.querySelector('#brimming .video-player #desktopbutton');
+var brimmingIcon = document.querySelector('#brimming .video-player #desktopbutton img');
 
 /* Build out functions */
 // toggle play/pause
@@ -53,3 +53,20 @@ brimmingVideo.addEventListener('fullscreenchange', brimmingexitHandler, false);
 brimmingVideo.addEventListener('mozfullscreenchange', brimmingexitHandler, false);
 brimmingVideo.addEventListener('MSFullscreenChange', brimmingexitHandler, false);
 brimmingVideo.addEventListener('webkitfullscreenchange', brimmingexitHandler, false);
+
+// mobile button
+
+var ppbutton = document.querySelector('#brimming .video-player #mobilebutton');
+ppbutton.addEventListener("click", playPause);
+
+myVideo = document.querySelector('#brimming .video-player video');
+function playPause() { 
+    if (myVideo.paused) {
+        myVideo.play();
+        ppbutton.innerHTML = "Pause";
+        }
+    else  {
+        myVideo.pause(); 
+        ppbutton.innerHTML = "Play";
+        }
+}
