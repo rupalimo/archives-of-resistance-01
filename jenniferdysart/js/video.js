@@ -21,10 +21,7 @@ function brimmingtoggleFullscreen() {
   } else if (brimmingVideo.mozRequestFullScreen) {
     brimmingVideo.mozRequestFullScreen();
     brimmingtogglePlay();
-  } else if (vid.webkitEnterFullscreen) {
-    vid.webkitEnterFullscreen(); //iphone test
- }
-  ;
+  };
   brimmingVideo.controls = true;
   brimmingVideo.muted = false;
   brimmingIcon.className = "hide";
