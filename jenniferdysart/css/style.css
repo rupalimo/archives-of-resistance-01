@@ -273,28 +273,8 @@ li.item-link div {
     }
 }
 
-@media screen and (min-width: 991px) {
-    #mobilebutton {
-        display: none;
-    }
-}
 
 @media screen and (max-width: 900px) {
-    #mobilebutton {
-        position: inherit;
-        z-index: 999;
-        cursor: url("../img/cursor-1.png"), auto !important;
-        background: transparent;
-        border: 0;
-        padding: 1rem;
-        color: white;
-        text-transform: uppercase;
-    }
-
-    #desktopbutton {
-        display: none;
-    }
-
     .brimming {
         display: block;
         overflow: visible;
