@@ -1,7 +1,7 @@
 /* Get our elements */
-var brimmingVideo = document.querySelector('#brimming .video-player video');
-var brimmingFullscreen = document.querySelector('#brimming .video-player #desktopbutton');
-var brimmingIcon = document.querySelector('#brimming .video-player #desktopbutton img');
+var brimmingVideo = document.querySelector('#brimming .video-player.desktop video');
+var brimmingFullscreen = document.querySelector('#brimming .video-player.desktop #desktopbutton');
+var brimmingIcon = document.querySelector('#brimming .video-player.desktop #desktopbutton img');
 
 /* Build out functions */
 // toggle play/pause

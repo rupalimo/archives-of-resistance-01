@@ -265,8 +265,20 @@ li.item-link div {
     margin-right: .5em;
 }
 
+.video-player.mobile {
+    display: none;
+}
+
 /* mobile breakpoints */
 @media screen and (max-width: 925px) {
+    .video-player.desktop {
+        display: none;
+    }
+
+    .video-player.mobile {
+        display: block;
+    }
+
     .item-link a.close-icon {
         top: 3vh;
         right: 3vh;
