@@ -48,25 +48,8 @@ function brimmingexitHandler() {
 // Click events
 brimmingFullscreen.addEventListener('click', brimmingtoggleFullscreen);
 
-// Exit fullscreen event from https://stackoverflow.com/questions/10706070/how-to-detect-when-a-page-exits-fullscreen
-brimmingVideo.addEventListener('fullscreenchange', brimmingexitHandler, false);
-brimmingVideo.addEventListener('mozfullscreenchange', brimmingexitHandler, false);
-brimmingVideo.addEventListener('MSFullscreenChange', brimmingexitHandler, false);
-brimmingVideo.addEventListener('webkitfullscreenchange', brimmingexitHandler, false);
-
-// mobile button
-
-var ppbutton = document.querySelector('#brimming .video-player #mobilebutton');
-ppbutton.addEventListener("click", playPause);
-
-myVideo = document.querySelector('#brimming .video-player video');
-function playPause() { 
-    if (myVideo.paused) {
-        myVideo.play();
-        ppbutton.innerHTML = "Pause";
-        }
-    else  {
-        myVideo.pause(); 
-        ppbutton.innerHTML = "Play";
-        }
-}
+// // Exit fullscreen event from https://stackoverflow.com/questions/10706070/how-to-detect-when-a-page-exits-fullscreen
+// brimmingVideo.addEventListener('fullscreenchange', brimmingexitHandler, false);
+// brimmingVideo.addEventListener('mozfullscreenchange', brimmingexitHandler, false);
+// brimmingVideo.addEventListener('MSFullscreenChange', brimmingexitHandler, false);
+// brimmingVideo.addEventListener('webkitfullscreenchange', brimmingexitHandler, false);
