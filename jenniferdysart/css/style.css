@@ -266,7 +266,7 @@ li.item-link div {
 }
 
 .video-player.mobile {
-    display: none;
+    display: none !important;
 }
 
 /* mobile breakpoints */
@@ -276,7 +276,7 @@ li.item-link div {
     }
 
     .video-player.mobile {
-        display: block;
+        display: block !important;
     }
 
     .item-link a.close-icon {
