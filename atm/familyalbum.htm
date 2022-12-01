@@ -2,13 +2,15 @@
 <html lang="en">
 
 <!-- (c) 2021 to present -->
-<!-- designed by Rupali Morzaria @shabana_asthma | last updated nov22-->
+<!-- designed by Rupali Morzaria @shabana_asthma | last updated nov22
+Page hand coded by Elina Tanaka @tanaka.jpeg -->
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/style.css'>
   <meta property="og:title" content="Family Album by ATM">
   <meta property="og:image" content="http://archivesofresistance.com/atm/familyalbum.htm">
   <meta name="description" content"An Online Exhibition from the Second Editions of Archives of Resistance, Northern Migration">
@@ -16,17 +18,152 @@
 
 </head>
 
-<body>
-  <main class="placeholder-exhibition">
-
-    <a href="#" target="_blank" title="View Exhibition Details"><img src="../assets/project-preview/atm.jpg" width="1000px" title="Promo Image for ATM's exhibition & artist talk"></a>
-    <a href="../index.htm" class="placeholder-AOR" title="arhivesofresistance.com">
-      <em>&#8592;</em>
-      <p>ARCHIVESOFRESISTANCE.COM</p>
-
-    </a>
-  </main>
-
+<body class="famalbum">
+  <!--hidden until script is tweaked <button id="">category buttons</button> -->
+  <h1 class="title">The Family Album</h1>
+  <div class="grid">
+      <div id="fullpage" onclick="this.style.display='none';"></div>
+      <div class="grid-item">
+          <a href="ElNegroMiguel.htm">
+              <img class="thumb" src="assets/1_el_negro_miguel/FMAG006.jpg">
+              <p>El Negro Miguel</p>
+              <p class="caption">A story read by Magali Muñíz</p>
+          </a>
+      </div>
+      <div class="grid-item">
+          <a href="LaTrachi.htm">
+              <img class="thumb" src="assets/2_trachi/la_trachi_1.jpg">
+              <p>Trachi: an Anecdote about Military Service</p>
+              <p class="caption">A story read by Magali Muñíz</p>
+          </a>
+      </div>
+      <div class="grid-item">
+          <a href="MochaCelis.htm">
+              <img class="thumb" src="assets/3_mocha_celis/Lorena Palavicini001.jpg">
+              <p>Lorena (Mocha Celis) & The Death of Mocha</p>
+              <p class="caption">A story read by Magali Muñíz</p>
+          </a>
+      </div>
+      <div class="grid-item">
+          <a href="marcela.htm">
+              <img class="thumb" src="assets/marcela/Fondo Documental Marcela _La rompe coches_ II.jpg">
+              <p>Marcela</p>
+          </a>
+      </div>
+      <div class="grid-item">
+          <a href="rosario.htm">
+              <img class="thumb" src="assets/rosario/Rosario la Uruguaya (118 de 131).jpg">
+              <p>Rosario</p>
+          </a>
+      </div>
+      
+      <div class="grid-item gallery" id="aldana">
+              <img class="thumb" src="assets/photos_only/Fondo Documental Aldana Gabriela Chocobar.jpg">
+              <p>Aldana Gabriela Chocobar</p>
+      </div>
+      <div class="grid-item gallery" id="claudia">
+          <img class="thumb"
+              src="assets/photos_only/Fondo Documental Claudia Pía Baudracco.jpg">
+          <p>Claudia Pía Baudracco</p>
+      </div>
+      <div class="grid-item gallery" id="mónica">
+          <img class="thumb"
+              src="assets/photos_only/Fondo Documental Mónica Andrada.jpg">
+          <p>Mónica Andrada</p>
+      </div>
+      <div class="grid-item gallery" id="pamela">
+          <img class="thumb"
+              src="assets/photos_only/Fondo Documental Pamela Rodríguez.jpg">
+          <p>Pamela Rodríguez</p>
+      </div>
+      <div class="grid-item gallery" id="raquel">
+          <img class="thumb" src="assets/photos_only/Fondo Documental Raquel Leiva.jpg">
+          <p>Raquel Leiva</p>
+      </div>
+      <div class="grid-item flip" id="sofía">
+          <img class="thumb front" src="assets/photos_only/Fondo Documental Sofía Saunier .jpg">
+          <img class="thumb back" src="assets/photos_only/Fondo_Documental_Sofía_Saunier_Back.jpg">
+          <p>Sofía Saunier</p>
+      </div>
+      <div class="grid-item">
+          <a href="cyntia.htm">
+              <img class="thumb" src="./assets/extra/0279.jpg">
+              <p>Cintia Anahi Pili</p>
+              <p class="caption">A story read by Belén</p>
+          </a>
+      </div>
+      <div class="grid-item">
+          <a href="evelyn.htm">
+              <img class="thumb" src="./assets/extra/CLAUDIA PIA BAUDRACCO065.jpg">
+              <p>Evelyn</p>
+              <p class="caption">A story read by Magali Muñíz</p>
+          </a>
+      </div>
+      <div class="grid-item">
+          <a href="giovana.htm">
+              <img class="thumb" src="./assets/extra/FMR_09_VC_0008_R.jpg">
+              <p>Giovana Susana la Cona</p>
+              <p class="caption">A story read by Carmen</p>
+          </a>
+      </div>
+  </div>
+  <div class="index">
+      <h2>Content</h2>
+      <ul class="headers">
+          <li class="columns border">
+              <strong>Stories with Images</strong>
+              <ul>
+                  <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
+                  <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
+                  </li>
+                  <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
+                  <li><a href="./MochaCelis.htm">The Death of Mocha read by Magalí Muñíz</a></li>
+              </ul>
+          </li>
+          <li class="columns border">
+              <strong>Images</strong>
+              <ul>
+                  <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
+                  <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
+                  </li>
+                  <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
+                  <li><a href="./MochaCelis.htm">The Death of Mocha read by Magalí Muñíz</a></li>
+                  <li><a href="marcela.htm">Marcela</a></li>
+                  <li><a href="rosario.htm">Rosario</a></li>
+                  <li><a href="#aldana">Aldana Gabriela Chocoba</a></li>
+                  <li><a href="#claudia">Claudia Pía Baudracco</a></li>
+                  <li><a href="#mónica">Mónica Andrada</a></li>
+                  <li><a href="pamela">Pamela Rodríguez</a></li>
+                  <li><a href="raquel">Raquel Leiva</a></li>
+                  <li><a href="sofía">Sofía Saunier</a></li>
+              </ul>
+          </li>
+          <li class="columns">
+              <strong>Stories</strong>
+              <ul>
+                  <li>
+                      <a href="./cyntia.htm">Cintia Anahi Pili read by Belén</a></li>
+                  <li><a href="./evelyn.htm">Evelyn read by Magali Muñíz</a></li>
+                  <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
+                  <li><a href="./giovana.htm">Giovana Susana la Cona (Referencia a Gina Vivanco) read by Carmen</a>
+                  </li>
+                  <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
+                  <li><a href="./MochaCelis.htm#Mocha2">The Death of Mocha read by Magalí Muñíz</a></li>
+                  <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+  <footer>
+      stories & images from <a href="https://archivotrans.ar/">ATM</a><br>
+      translations by SoJin Chun<br>
+      hand-coded by <a href="http://www.tanakajpeg.com">e tanaka</a><br>
+      back to the <a href="../index.htm">archive</a>
+  </footer>
+  <script src="js/general.js" defer></script>
+  <script src="js/drag.js" defer></script>
 </body>
+
 
 </html>
