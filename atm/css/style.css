@@ -1,0 +1,499 @@
+@import url(fonts.css);
+
+:root {
+    font-family: var(--serif-font);
+    --mono-font: "Necto Mono", "Inconsolata", "Courier New", "Courier", monospace;
+    --serif-font: "Recife Upright", "Reckless", "Times New Roman", "Times", serif;
+    --index-serif-font: "Uchen", "Reckless", "Times New Roman", "Times", serif;
+    --serif-italic: "Recife Italic", serif;
+    --serif-display: "mazius_review_20.09XIt", "Aguafina Script";
+    --sans-serif-font: "Suisse", "Helvetica", "Arial", sans-serif;
+    font-size: calc(14px + 0.390625vw);
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* color declarations */
+    --background-color-1: #FCFCF6;
+    --background-color-2: #F5F5F5;
+    --background-color-3: #F6F9F3;
+    --accent-color-1: #7D2656;
+    --accent-color-2: #185C00;
+    --accent-color-3: #343434;
+    transition: 1s all;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif-display)
+}
+
+.famalbum .title {
+    text-align: center;
+    text-decoration: 1px wavy underline;
+}
+
+.famalbum a {
+    text-decoration: none;
+    color: var(--accent-color-1);
+}
+
+.famalbum a:hover p {
+    text-decoration: wavy underline var(--accent-color-1);
+}
+
+
+.famalbum .grid .grid-item a:hover p.caption {
+    text-decoration: none;
+}
+
+#dragdiv {
+    position: absolute;
+    z-index: 9;
+    cursor: move;
+}
+
+.famalbum {
+    background-color: var(--background-color-1);
+    color: var(--accent-color-1);
+}
+
+.famalbum .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.famalbum .grid .grid-item {
+    max-width: 14em;
+    display: inline-flex;
+    text-align: center;
+    margin: 1em;
+    flex-direction: column;
+    align-self: first baseline;
+    background: var(--background-color-2);
+    border: 2px solid var(--accent-color-1);
+}
+
+.famalbum .grid .grid-item:hover {
+    box-shadow: 5px 5px 0px -3px var(--accent-color-1);
+}
+
+.famalbum .grid .grid-item p {
+    font-family: var(--serif-display);
+}
+
+.famalbum .grid .grid-item p.caption {
+    font-family: var(--mono-font);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-top: -12px;
+}
+
+
+.famalbum .grid .grid-item img {
+    width: 100%;
+    mix-blend-mode: darken;
+    border-radius: 20PX;
+}
+
+.famalbum .grid .grid-item.flip {
+    cursor: pointer;
+}
+
+.famalbum .grid .grid-item.flip .back {
+    display: none;
+}
+
+.famalbum .grid .grid-item.flip:hover .back {
+    display: block;
+    position: absolute;
+    width: 14em;
+    mix-blend-mode: normal;
+}
+
+/* .famalbum .grid .grid-item.flip {
+    transition: 1s;
+    cursor: pointer;
+}
+
+.famalbum .grid .grid-item .back {
+    position: absolute;
+    width: 14em;
+    transform: translateX(100px) scaleX(0);
+    transform-origin: left;
+    transition: transform 3s ease;
+    mix-blend-mode: normal;
+}
+
+.famalbum .grid .grid-item.flip:hover .back {
+    transform: translateX(0em) scale(1);
+} */
+
+.grid-item:hover .more-info i {
+    padding-left: 20px;
+    transition-duration: .5s;
+}
+
+.grid-item:hover .grid-item-wrapper {
+    padding: 2% 2%;
+    margin: -2% -2%;
+}
+
+/* fullscreen toggle */
+
+.gallery img {
+    cursor: zoom-in;
+}
+
+#fullpage {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.468);
+    cursor: zoom-out;
+}
+
+/* index & footer main */
+.famalbum .index {
+    font-family: var(--index-serif-font);
+    background: var(--background-color-3);
+    color: var(--accent-color-2);
+    border: 1px solid;
+    font-size: .7rem;
+    margin: 10em 1em 1em 1em;
+}
+
+
+.famalbum .index h2 {
+    text-align: center;
+    border-bottom: 3px double black;
+    padding-bottom: 0.5rem;
+}
+
+.famalbum .index ul.headers {
+    column-count: 3;
+    gap: 10px;
+    padding: 10px;
+}
+
+.famalbum .index li {
+    line-height: 1.7;
+}
+
+.famalbum .index li.columns {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.famalbum .index li.columns li {
+    text-indent: 5px;
+}
+
+.famalbum .index li.border {
+    border-right: 1px solid black;
+}
+
+.famalbum .index li,
+.famalbum .index ul {
+    list-style: none;
+}
+
+.famalbum .index ul {
+    padding-left: .5rem;
+}
+
+.famalbum .index a {
+    color: var(--accent-color-2);
+}
+
+.famalbum .index a:hover {
+    text-decoration: wavy underline var(--accent-color-2);
+}
+
+.famalbum footer {
+    font-family: var(--sans-serif-font);
+    font-size: .5rem;
+    padding: .5rem;
+}
+
+/* individual pages */
+.storypages {
+    display: flex;
+    flex-direction: column;
+}
+
+.storypages.latrachi {
+    background-color: var(--background-color-3);
+}
+
+nav {
+    margin-top: .5rem;
+}
+
+nav a {
+    border: 1px solid var(--accent-color-2);
+    color: var(--accent-color-2);
+    padding: .3rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: var(--accent-color-2);
+    color: var(--background-color-1);
+}
+
+.transcript {
+    column-count: 3;
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+}
+
+.transcript p,
+.transcriptonly p {
+    font-family: var(--serif-font);
+    font-weight: 243;
+    font-variation-settings: "opsz"1;
+    font-style: normal;
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+.storypages h1 {
+    margin-bottom: 0;
+    color: var(--accent-color-1);
+}
+
+.storypages .transcriptonly h1 {
+    margin: 1rem;
+}
+
+.storypages .transcriptonly.threecolumns {
+    column-count: 3;
+}
+
+.storypages h1.english {
+    color: var(--accent-color-3);
+}
+
+.storypages p {
+    color: var(--accent-color-1);
+    text-indent: 1rem;
+}
+
+.storypages strong {
+    font-family: var(--serif-font);
+    color: var(--accent-color-3);
+    font-size: .7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.storypages .english {
+    color: var(--accent-color-3);
+}
+
+.storypages audio {
+    max-width: 20em;
+}
+
+.transcript img.inline {
+    max-width: 15rem;
+    mix-blend-mode: darken;
+}
+
+.transcript img.inline:nth-of-type(even) {
+    float: left;
+    padding-right: 1rem;
+}
+
+.transcript img.inline:nth-of-type(even):hover {
+    transform: rotate(-5deg);
+}
+
+.transcript img.inline:nth-of-type(odd) {
+    float: right;
+    padding-left: 1rem;
+}
+
+.transcript img.inline:nth-of-type(odd):hover {
+    transform: rotate(5deg);
+}
+
+.gallery img {
+    max-width: 15em;
+    height: fit-content;
+}
+
+.galleryonly {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery img#draggable-elem:nth-child(1) {
+    left: 14%;
+}
+
+.gallery img#draggable-elem:nth-child(2) {
+    left: 37%;
+    top: 25%;
+}
+
+.gallery img#draggable-elem:nth-child(3) {
+    left: 37%;
+    top: 80%;
+}
+
+.gallery img#draggable-elem:nth-child(4) {
+    left: 59%;
+}
+
+.gallery img#draggable-elem:nth-child(5) {
+    left: 80%;
+}
+
+
+.galleryonly img {
+    max-width: 33%;
+    height: -moz-available;
+}
+
+.storypages #container {
+    position: relative;
+    left: 0;
+    height: 20em;
+}
+
+.storypages button.audio {
+    margin-right: .4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 20px;
+    border: 1px solid;
+    font-family: var(--serif-font);
+    color: var(--accent-color-1);
+    background-color: var(--background-color-3);
+}
+
+.storypages button.audio:hover {
+    background-color: var(--accent-color-1);
+    color: var(--background-color-3);
+}
+
+#draggable-elem {
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    cursor: move;
+    z-index: 2;
+}
+
+.elnegromiguel .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.elnegromiguel .container .column:nth-of-type(1) {
+    margin-right: 5em;
+}
+
+.elnegromiguel button.audio {
+    margin-top: 1em;
+}
+
+.elnegromiguel .gallery img {
+    margin: 1em;
+}
+
+.elnegromiguel .gallery img:hover {
+    transform: rotate(-5deg);
+}
+
+.evelyn .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.evelyn .column {
+    padding: 3em;
+}
+
+.gallerypages {
+    background-color: var(--accent-color-3);
+    color: var(--background-color-1);
+}
+
+.gallerypages .gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery.nofullscreen img {
+    cursor: crosshair;
+}
+
+.gallerypages .gallery img {
+    max-width: 40em;
+}
+
+.gallerypages .gallery img:hover {
+    transform: rotate3d(3, 3, 3, 13deg);
+}
+
+.gallerypages nav a {
+    background-color: var(--background-color-3);
+}
+
+.storypages.bg::before {
+    background-image: url("../assets/extra/0279.jpg");
+    background-size: cover;
+    background-position-y: center;
+    opacity: .3;
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 113%;
+    height: 122%;
+    z-index: -8;
+}
+
+/* media breakpoints */
+@media screen and (max-width: 599px) {
+    .transcript {
+        column-count: 1;
+    }
+
+    .storypages .transcriptonly.threecolumns {
+        column-count: 1;
+        margin: 0 2em;
+    }
+
+    .gallerypages .gallery img {
+        max-width: 16em;
+    }
+
+    .storypages.bg::before {
+        height: 192px;
+        z-index: -8;
+        background-size: contain;
+    }
+
+    .famalbum .grid .grid-item {
+        max-width: 11em;
+    }
+}
