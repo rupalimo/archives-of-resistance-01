@@ -8,19 +8,19 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/style.css'>
   <meta property="og:title" content="Family Album by ATM">
   <meta property="og:image" content="http://archivesofresistance.com/atm/familyalbum.htm">
   <meta name="description" content"An Online Exhibition from the Second Editions of Archives of Resistance, Northern Migration">
   <title>AOR / Family Album by ATM</title>
-
 </head>
 
 <body class="famalbum">
   <!--hidden until script is tweaked <button id="">category buttons</button> -->
-  <h1 class="title">The Family Album</h1>
+  <a class="indexnav" href="#index">index</a>
+  <h1 class="title">Family Album</h1>
+  <p class="description">blurb about the project</p>
   <div class="grid">
       <div id="fullpage" onclick="this.style.display='none';"></div>
       <div class="grid-item">
@@ -63,26 +63,26 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
       </div>
       <div class="grid-item gallery" id="claudia">
           <img class="thumb"
-              src="assets/photos_only/Fondo Documental Claudia Pía Baudracco.jpg">
+              src="./assets/photos_only/Fondo Documental Claudia Pía Baudracco.jpg">
           <p>Claudia Pía Baudracco</p>
       </div>
       <div class="grid-item gallery" id="mónica">
           <img class="thumb"
-              src="assets/photos_only/Fondo Documental Mónica Andrada.jpg">
+              src="./assets/photos_only/Fondo Documental Mónica Andrada.jpg">
           <p>Mónica Andrada</p>
       </div>
       <div class="grid-item gallery" id="pamela">
           <img class="thumb"
-              src="assets/photos_only/Fondo Documental Pamela Rodríguez.jpg">
+              src="./assets/photos_only/Fondo Documental Pamela Rodríguez.jpg">
           <p>Pamela Rodríguez</p>
       </div>
       <div class="grid-item gallery" id="raquel">
-          <img class="thumb" src="assets/photos_only/Fondo Documental Raquel Leiva.jpg">
+          <img class="thumb" src="./assets/photos_only/RaquelLeiva.jpg">
           <p>Raquel Leiva</p>
       </div>
       <div class="grid-item flip" id="sofía">
-          <img class="thumb front" src="assets/photos_only/Fondo Documental Sofía Saunier .jpg">
-          <img class="thumb back" src="assets/photos_only/Fondo_Documental_Sofía_Saunier_Back.jpg">
+          <img class="thumb front" src="./assets/photos_only/Fondo Documental Sofía Saunier .jpg">
+          <img class="thumb back" src="./assets/photos_only/Fondo_Documental_Sofía_Saunier_Back.jpg">
           <p>Sofía Saunier</p>
       </div>
       <div class="grid-item">
@@ -107,7 +107,7 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
           </a>
       </div>
   </div>
-  <div class="index">
+  <div id="index" class="index">
       <h2>Content</h2>
       <ul class="headers">
           <li class="columns border">
@@ -157,7 +157,6 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
   </div>
   <footer>
       stories & images from <a href="https://archivotrans.ar/">ATM</a><br>
-      translations by SoJin Chun<br>
       hand-coded by <a href="http://www.tanakajpeg.com">e tanaka</a><br>
       back to the <a href="../index.htm">archive</a>
   </footer>
