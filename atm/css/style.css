@@ -33,6 +33,14 @@ h3 {
     text-decoration: 1px wavy underline;
 }
 
+.famalbum .description {
+    text-align: center;
+    font-family: var(--mono-font);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-top: -12px;
+}
+
 .famalbum a {
     text-decoration: none;
     color: var(--accent-color-1);
@@ -42,9 +50,18 @@ h3 {
     text-decoration: wavy underline var(--accent-color-1);
 }
 
-
 .famalbum .grid .grid-item a:hover p.caption {
     text-decoration: none;
+}
+
+.indexnav {
+    position: absolute;
+    right: 1rem;
+    text-transform: uppercase;
+}
+
+.indexnav::after {
+    content: url();
 }
 
 #dragdiv {
@@ -380,7 +397,7 @@ nav a:hover {
     margin-right: .4rem;
     text-transform: uppercase;
     cursor: pointer;
-    width: fit-content;
+    width: -moz-available;
     border-radius: 20px;
     border: 1px solid;
     font-family: var(--serif-font);
@@ -470,6 +487,14 @@ nav a:hover {
     width: 113%;
     height: 122%;
     z-index: -8;
+}
+
+.transcript.bisect {
+    display: flex;
+}
+
+.transcript .twocolumn {
+    padding: 3rem;
 }
 
 /* media breakpoints */
