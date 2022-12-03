@@ -259,7 +259,7 @@ h3 {
 }
 
 .storypages.latrachi {
-    background-color: var(--background-color-3);
+    background-color: var(--background-color-2);
 }
 
 nav {
@@ -337,25 +337,25 @@ nav a:hover {
 }
 
 .transcript img.inline {
-    max-width: 15rem;
+    max-width: 12rem;
     mix-blend-mode: darken;
 }
 
-.transcript img.inline:nth-of-type(even) {
+.transcript .gallery:nth-of-type(even) {
     float: left;
     padding-right: 1rem;
 }
 
-.transcript img.inline:nth-of-type(even):hover {
+.transcript .gallery:nth-of-type(even):hover {
     transform: rotate(-5deg);
 }
 
-.transcript img.inline:nth-of-type(odd) {
+.transcript .gallery:nth-of-type(odd) {
     float: right;
     padding-left: 1rem;
 }
 
-.transcript img.inline:nth-of-type(odd):hover {
+.transcript .gallery:nth-of-type(odd):hover {
     transform: rotate(5deg);
 }
 
@@ -506,6 +506,7 @@ nav a:hover {
 
 .transcript .twocolumn {
     padding: 3rem;
+    max-width: 45%;
 }
 
 /* media breakpoints */
