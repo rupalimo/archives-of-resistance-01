@@ -14,11 +14,11 @@
     -moz-osx-font-smoothing: grayscale;
     /* color declarations */
     --background-color-1: #FCFCF6;
-    --background-color-2: #F5F5F5;
-    --background-color-3: #F6F9F3;
-    --accent-color-1: #7D2656;
-    --accent-color-2: #185C00;
-    --accent-color-3: #343434;
+    --background-color-2: #FFFFFF;
+    --background-color-3: #BBDF29;
+    --accent-color-1: #FF7A00;
+    --accent-color-2: #001AFF;
+    --accent-color-3: #A7A094;
     transition: 1s all;
 }
 
@@ -48,10 +48,6 @@ h3 {
 
 .famalbum a:hover p {
     text-decoration: wavy underline var(--accent-color-1);
-}
-
-.famalbum .grid .grid-item a:hover p.caption {
-    text-decoration: none;
 }
 
 .indexnav {
@@ -100,13 +96,28 @@ h3 {
     font-family: var(--serif-display);
 }
 
+.famalbum .grid .grid-item a:hover p.caption {
+    text-decoration: none;
+}
+
+.famalbum .grid .grid-item .nametitle {
+    font-size: 1.513em;
+    color: var(--background-color-3);
+}
+
+.famalbum .grid .grid-item .quote {
+    font-family: 'aguafina script' !important;
+    letter-spacing: 0.09rem;
+    color: var(--accent-color-3);
+}
+
 .famalbum .grid .grid-item p.caption {
     font-family: var(--mono-font);
     font-size: 0.6rem;
     text-transform: uppercase;
+    color: var(--accent-color-3);
     margin-top: -12px;
 }
-
 
 .famalbum .grid .grid-item img {
     width: 100%;
@@ -183,7 +194,7 @@ h3 {
     font-family: var(--index-serif-font);
     background: var(--background-color-3);
     color: var(--accent-color-2);
-    border: 1px solid;
+    border: 1px solid var(--accent-color-2);
     font-size: .7rem;
     margin: 10em 1em 1em 1em;
 }
