@@ -8,6 +8,7 @@
     --serif-italic: "Recife Italic", serif;
     --serif-display: 'Amarante', "mazius_review_20.09XIt", "Aguafina Script", display;
     --sans-serif-font: "Suisse", "Helvetica", "Arial", sans-serif;
+    --handwritten-font: "Hello Ketta", "Bulgatti", "Better Grade", sans-serif;
     font-size: calc(14px + 0.390625vw);
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -111,9 +112,24 @@ h3 {
 }
 
 .famalbum .grid .grid-item .quote {
-    font-family: 'aguafina script' !important;
-    letter-spacing: 0.09rem;
-    color: var(--accent-color-3);
+    color: var(--background-color-1);
+    padding: 0 1rem;
+}
+
+.famalbum .grid .grid-item .one {
+    font-family: "Hello Ketta" !important;
+    font-size: 1.5rem;
+}
+
+.famalbum .grid .grid-item .two {
+    font-family: "Better Grade" !important;
+    font-size: 1.8rem;
+}
+
+.famalbum .grid .grid-item .three {
+    font-family: "Bulgatti" !important;
+    letter-spacing: 0.037em;
+    line-height: 2;
 }
 
 .famalbum .grid .grid-item p.caption {
