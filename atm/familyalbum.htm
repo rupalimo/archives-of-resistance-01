@@ -6,170 +6,196 @@
 Page hand coded by Elina Tanaka @tanaka.jpeg -->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/style.css'>
-  <meta property="og:title" content="Family Album by ATM">
-  <meta property="og:image" content="http://archivesofresistance.com/atm/familyalbum.htm">
-  <meta name="description" content="An Online Exhibition from the Second Editions of Archives of Resistance, Northern Migration">
-  <title>AOR / Family Album by ATM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/style.css'>
+    <meta property="og:title" content="Family Album by ATM">
+    <meta property="og:image" content="http://archivesofresistance.com/atm/familyalbum.htm">
+    <meta name="description"
+        content="An Online Exhibition from the Second Editions of Archives of Resistance, Northern Migration">
+    <title>AOR / Family Album by ATM</title>
 </head>
 
 <body class="famalbum">
-  <!--hidden until script is tweaked <button id="">category buttons</button> -->
-  <a class="indexnav" href="#index">index <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 0L8 20" stroke="var(--accent-color-1)" stroke-width="1.3"/>
-    <path d="M1 12L7.91765 19.7372" stroke="var(--accent-color-1)" stroke-width="1.3"/>
-    <path d="M14.9177 12L8.00002 19.7372" stroke="var(--accent-color-1)" stroke-width="1.3"/>
-    </svg>
+    <!--hidden until script is tweaked <button id="">category buttons</button> -->
+    <a class="indexnav" href="#index">index <svg width="16" height="21" viewBox="0 0 16 21" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0L8 20" stroke="var(--accent-color-1)" stroke-width="1.3" />
+            <path d="M1 12L7.91765 19.7372" stroke="var(--accent-color-1)" stroke-width="1.3" />
+            <path d="M14.9177 12L8.00002 19.7372" stroke="var(--accent-color-1)" stroke-width="1.3" />
+        </svg>
     </a>
-  <h1 class="title">Family Album</h1>
-  <p class="description"><i>Family Album,</i> is the second exhibition from <a href="">Archives of Resistance: Northern Migration</a> showcasing a selection of photographs and stories in Archivo de la Memoria Trans/Archive of Trans Memory (ATM) from Buenos Aires, Argentina. This exhibition illustrates narratives of friendship, love, resistance and hardship narrated by the Trans women in this community. This collection of photographs, mainly from the 1980s, gives us insight into the lives of the Argentine Trans community before the Gender Identity Law was passed in 2012. Prior to this law, it was illegal to cross-dress in Argentina despite the visibility of Trans women in carnival parades. Today, Trans people in Argentina have the legal right to live their true identities thanks to the mobilization and perseverance that the older generation of Trans people suffered in Argentina. Many of the Trans women featured in this exhibition were exiled or have passed away. Here are some of their stories. </p>
-  <div class="grid">
-      <div id="fullpage" onclick="this.style.display='none';"></div>
-      <div class="grid-item">
-          <a href="ElNegroMiguel.htm">
-              <img class="thumb" src="assets/1_el_negro_miguel/FMAG006.jpg">
-              <p class="nametitle">El Negro Miguel</p>
-              <p class="caption">A story read by Magali Muñíz</p>
-          </a>
-      </div>
-      <div class="grid-item">
-          <a href="LaTrachi.htm">
-              <img class="thumb" src="assets/2_trachi/la_trachi_1.jpg">
-              <p class="nametitle">Trachi: an Anecdote about Military Service</p>
-              <p class="caption">A story read by Magali Muñíz</p>
-          </a>
-      </div>
-      <div class="grid-item">
-          <a href="MochaCelis.htm">
-              <img class="thumb" src="assets/3_mocha_celis/Lorena_1.jpg">
-              <p class="nametitle">Lorena (Mocha Celis) & The Death of Mocha</p>
-              <p class="caption">A story read by Magali Muñíz</p>
-          </a>
-      </div>
-      <div class="grid-item">
-          <a href="marcela.htm">
-              <img class="thumb" src="assets/marcela/Marcela_1.jpg">
-              <p class="nametitle">Marcela</p>
-          </a>
-      </div>
-      <div class="grid-item">
-          <a href="rosario.htm">
-              <img class="thumb" src="assets/rosario/Rosario_la_Uruguaya_1.jpg">
-              <p class="nametitle">Rosario</p>
-          </a>
-      </div>
-      
-      <div class="grid-item gallery" id="aldana">
-              <img class="thumb" src="assets/photos_only/Aldana_Gabriela_Chocobar.jpg">
-              <p class="nametitle">Aldana Gabriela Chocobar</p>
-      </div>
-      <div class="grid-item gallery" id="claudia">
-          <img class="thumb"
-              src="./assets/photos_only/Claudia_Pía_Baudracco.jpg">
-          <p class="nametitle">Claudia Pía Baudracco</p>
-      </div>
-      <div class="grid-item gallery" id="mónica">
-          <img class="thumb"
-              src="./assets/photos_only/Mónica_Andrada.jpg">
-          <p class="nametitle">Mónica Andrada</p>
-      </div>
-      <div class="grid-item gallery" id="pamela">
-          <img class="thumb"
-              src="./assets/photos_only/Pamela_Rodríguez.jpg">
-          <p class="nametitle">Pamela Rodríguez</p>
-      </div>
-      <div class="grid-item gallery" id="raquel">
-          <img class="thumb" src="./assets/photos_only/RaquelLeiva.jpg">
-          <p class="nametitle">Raquel Leiva</p>
-      </div>
-      <div class="grid-item flip" id="sofía">
-          <img class="thumb front" src="./assets/photos_only/Sofía_Saunier.jpg">
-          <img class="thumb back" src="./assets/photos_only/Sofía_Saunier_Back.jpg">
-          <p class="nametitle">Sofía Saunier</p>
-      </div>
-      <div class="grid-item">
-          <a href="cyntia.htm">
-              <p class="quote one">"Marcela me ofreció un techo, un amor, junto con ella comencé una nueva vida. La pérdida de Marcela fue muy fuerte para mí."</p>
-              <p class="quote one english">"Marcela gave me a roof and love. I started a new life with her. The loss of Marcela was very hard for me."</p>
-              <p class="nametitle">Cintia Anahi Pili</p>
-              <p class="caption">A story read by Belén</p>
-          </a>
-      </div>
-      <div class="grid-item">
-          <a href="evelyn.htm">
-              <p class="quote two">"Evelyn nació así: no se si conocieron pero había un coreógrafo muy conocido en Argentina que se llamaba Eric Zepeda."</p>
-              <p class="quote two english">"Evelyn was born like this: I don't know if you know but there was a well-known choreographer in Argentina named Eric Zepeda."</p>
-              <p class="nametitle">Evelyn</p>
-              <p class="caption">A story read by Magali Muñíz</p>
-          </a>
-      </div>
-      <div class="grid-item">
-          <a href="giovana.htm">
-              <p class="quote three">"Todo comenzó con una amiga que venía de Milán, ahí yo me pude soltar."</p>
-              <p class="quote three english">"It all started with a friend who came from Milan. After that, I was able to let go."</p>
-              <p class="nametitle">Giovana Susana la Cona</p>
-              <p class="caption">A story read by Carmen</p>
-          </a>
-      </div>
-  </div>
-  <div id="index" class="index">
-      <h2>Content</h2>
-      <ul class="headers">
-          <li class="columns border">
-              <strong>Stories with Images</strong>
-              <ul>
-                  <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
-                  <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
-                  </li>
-                  <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
-                  <li><a href="./MochaCelis.htm#Mocha2">The Death of Mocha read by Magalí Muñíz</a></li>
-              </ul>
-          </li>
-          <li class="columns border">
-              <strong>Images</strong>
-              <ul>
-                  <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
-                  <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
-                  </li>
-                  <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
-                  <li><a href="./MochaCelis.htm">The Death of Mocha read by Magalí Muñíz</a></li>
-                  <li><a href="marcela.htm">Marcela</a></li>
-                  <li><a href="rosario.htm">Rosario</a></li>
-                  <li><a href="#aldana">Aldana Gabriela Chocoba</a></li>
-                  <li><a href="#claudia">Claudia Pía Baudracco</a></li>
-                  <li><a href="#mónica">Mónica Andrada</a></li>
-                  <li><a href="pamela">Pamela Rodríguez</a></li>
-                  <li><a href="raquel">Raquel Leiva</a></li>
-                  <li><a href="sofía">Sofía Saunier</a></li>
-              </ul>
-          </li>
-          <li class="columns">
-              <strong>Stories</strong>
-              <ul>
-                  <li>
-                      <a href="./cyntia.htm">Cintia Anahi Pili read by Belén</a></li>
-                  <li><a href="./evelyn.htm">Evelyn read by Magali Muñíz</a></li>
-                  <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
-                  <li><a href="./giovana.htm">Giovana Susana la Cona (Referencia a Gina Vivanco) read by Carmen</a>
-                  </li>
-                  <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
-                  <li><a href="./MochaCelis.htm#Mocha2">The Death of Mocha read by Magalí Muñíz</a></li>
-                  <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
-                  </li>
-              </ul>
-          </li>
-      </ul>
-  </div>
-  <footer>
-      stories & images from <a href="https://archivotrans.ar/">ATM</a><br>
-      hand-coded by <a href="http://www.tanakajpeg.com">e tanaka</a><br>
-      back to the <a href="../index.htm">archive</a>
-  </footer>
-  <script src="js/general.js" defer></script>
-  <script src="js/drag.js" defer></script>
+    <div class="flier">
+        <img src="./assets/extra/FJC025.jpg">
+    </div>
+    
+    <details>
+        <p class="description"><i>Family Album,</i> is the second exhibition from <a href="https://archivotrans.ar/">Archives of Resistance:
+            Northern Migration</a> showcasing a selection of photographs and stories in <a href="../index.htm">Archivo de la Memoria
+        Trans/Archive of Trans Memory (ATM)</a> from Buenos Aires, Argentina. This exhibition illustrates narratives of
+        friendship, love, resistance and hardship narrated by the Trans women in this community. This collection of
+        photographs, mainly from the 1980s, gives us insight into the lives of the Argentine Trans community before the
+        Gender Identity Law was passed in 2012. Prior to this law, it was illegal to cross-dress in Argentina despite
+        the visibility of Trans women in carnival parades. Today, Trans people in Argentina have the legal right to live
+        their true identities thanks to the mobilization and perseverance that the older generation of Trans people
+        suffered in Argentina. Many of the Trans women featured in this exhibition were exiled or have passed away. Here
+        are some of their stories. </p>
+        <summary>
+            <h1 class="title">Family Album</h1>
+            </summary>
+    </details>
+    <div class="filter">
+        <button>all</button><button>images</button><button>stories</button>
+    </div>
+    <div class="grid">
+        <div id="fullpage" onclick="this.style.display='none';"></div>
+        <div class="grid-item">
+            <a href="ElNegroMiguel.htm">
+                <img class="thumb" src="assets/1_el_negro_miguel/FMAG020.jpg">
+                <p class="nametitle">El Negro Miguel</p>
+                <p class="caption">A story read by Magali Muñíz</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="LaTrachi.htm">
+                <img class="thumb" src="assets/2_trachi/la_trachi_2.jpg">
+                <p class="nametitle">La Trachyn</p>
+                <p class="caption">An Anecdote about Military Service, read by Magali Muñíz</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="MochaCelis.htm">
+                <img class="thumb" src="assets/3_mocha_celis/Lorena_4.jpg">
+                <p class="nametitle">Lorena (Mocha Celis) & The Death of Mocha</p>
+                <p class="caption">A story read by Magali Muñíz</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="marcela.htm">
+                <img class="thumb" src="assets/marcela/Marcela_1.jpg">
+                <p class="nametitle">Marcela</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="rosario.htm">
+                <img class="thumb" src="assets/rosario/Rosario_la_Uruguaya_3.jpg">
+                <p class="nametitle">Rosario</p>
+            </a>
+        </div>
+
+        <div class="grid-item gallery" id="aldana">
+            <img class="thumb" src="assets/photos_only/Aldana_Gabriela_Chocobar.jpg">
+            <p class="nametitle">Aldana Gabriela Chocobar</p>
+        </div>
+        <div class="grid-item gallery" id="claudia">
+            <img class="thumb" src="./assets/photos_only/Claudia.jpg">
+            <p class="nametitle">Claudia Pía Baudracco</p>
+        </div>
+        <div class="grid-item gallery" id="mónica">
+            <img class="thumb" src="./assets/photos_only/Monica.jpg">
+            <p class="nametitle">Mónica Andrada</p>
+        </div>
+        <div class="grid-item gallery" id="pamela">
+            <img class="thumb" src="./assets/photos_only/Pamela.jpg">
+            <p class="nametitle">Pamela Rodríguez</p>
+        </div>
+        <div class="grid-item gallery" id="raquel">
+            <img class="thumb" src="./assets/photos_only/RaquelLeiva.jpg">
+            <p class="nametitle">Raquel Leiva</p>
+        </div>
+        <div class="grid-item flip" id="sofía">
+            <img class="thumb front" src="./assets/photos_only/Sofia.jpg">
+            <img class="thumb back" src="./assets/photos_only/Sofia_Back.jpg">
+            <p class="nametitle">Sofía Saunier</p>
+        </div>
+        <div class="grid-item">
+            <a href="cyntia.htm">
+                <p class="quote one">"Marcela me ofreció un techo, un amor, junto con ella comencé una nueva vida. La
+                    pérdida de Marcela fue muy fuerte para mí."</p>
+                <p class="quote one english">"Marcela gave me a roof and love. I started a new life with her. The loss
+                    of Marcela was very hard for me."</p>
+                <p class="nametitle">Cintia Anahi Pili</p>
+                <p class="caption">A story read by Belén</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="evelyn.htm">
+                <p class="quote two">"Evelyn nació así: no se si conocieron pero había un coreógrafo muy conocido en
+                    Argentina que se llamaba Eric Zepeda."</p>
+                <p class="quote two english">"Evelyn was born like this: I don't know if you know but there was a
+                    well-known choreographer in Argentina named Eric Zepeda."</p>
+                <p class="nametitle">Evelyn</p>
+                <p class="caption">A story read by Magali Muñíz</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="giovana.htm">
+                <p class="quote three">"Todo comenzó con una amiga que venía de Milán, ahí yo me pude soltar."</p>
+                <p class="quote three english">"It all started with a friend who came from Milan. After that, I was able
+                    to let go."</p>
+                <p class="nametitle">Giovana Susana la Cona</p>
+                <p class="caption">A story read by Carmen</p>
+            </a>
+        </div>
+    </div>
+    <div id="index" class="index">
+        <h2>Content</h2>
+        <ul class="headers">
+            <li class="columns border">
+                <strong>Stories with Images</strong>
+                <ul>
+                    <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
+                    <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
+                    </li>
+                    <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
+                    <li><a href="./MochaCelis.htm#Mocha2">The Death of Mocha read by Magalí Muñíz</a></li>
+                </ul>
+            </li>
+            <li class="columns border">
+                <strong>Images</strong>
+                <ul>
+                    <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
+                    <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
+                    </li>
+                    <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
+                    <li><a href="./MochaCelis.htm">The Death of Mocha read by Magalí Muñíz</a></li>
+                    <li><a href="marcela.htm">Marcela</a></li>
+                    <li><a href="rosario.htm">Rosario</a></li>
+                    <li><a href="#aldana">Aldana Gabriela Chocoba</a></li>
+                    <li><a href="#claudia">Claudia Pía Baudracco</a></li>
+                    <li><a href="#mónica">Mónica Andrada</a></li>
+                    <li><a href="pamela">Pamela Rodríguez</a></li>
+                    <li><a href="raquel">Raquel Leiva</a></li>
+                    <li><a href="sofía">Sofía Saunier</a></li>
+                </ul>
+            </li>
+            <li class="columns">
+                <strong>Stories</strong>
+                <ul>
+                    <li>
+                        <a href="./cyntia.htm">Cintia Anahi Pili read by Belén</a></li>
+                    <li><a href="./evelyn.htm">Evelyn read by Magali Muñíz</a></li>
+                    <li><a href="./ElNegroMiguel.htm">El Negro Miguel read by Magali Muñíz</a></li>
+                    <li><a href="./giovana.htm">Giovana Susana la Cona (Referencia a Gina Vivanco) read by Carmen</a>
+                    </li>
+                    <li><a href="./MochaCelis.htm">Lorena (Mocha Celis) read by Magalí Muñíz</a></li>
+                    <li><a href="./MochaCelis.htm#Mocha2">The Death of Mocha read by Magalí Muñíz</a></li>
+                    <li><a href="./LaTrachi.htm">Trachi: An Anecdote about Military Service read by Magali Muñíz</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>
+        stories & images from <a href="https://archivotrans.ar/">ATM</a><br>
+        hand-coded by <a href="http://www.tanakajpeg.com">E Tanaka</a><br>
+        back to <a href="../index.htm">Archives of Resistance</a></p>
+    </footer>
+    <script src="js/general.js" defer></script>
+    <script src="js/drag.js" defer></script>
 </body>
 
 

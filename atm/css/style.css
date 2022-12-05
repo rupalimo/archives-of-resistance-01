@@ -6,7 +6,8 @@
     --serif-font: "Recife Upright", "Reckless", "Times New Roman", "Times", serif;
     --index-serif-font: "Uchen", "Reckless", "Times New Roman", "Times", serif;
     --serif-italic: "Recife Italic", serif;
-    --serif-display: 'Amarante', "mazius_review_20.09XIt", "Aguafina Script", display;
+    --serif-display: "mazius_review_20.09XIt", "Aguafina Script", display;
+    --serif-display-2: "Amarante", display;
     --sans-serif-font: "Suisse", "Helvetica", "Arial", sans-serif;
     --handwritten-font: "Hello Ketta", "Bulgatti", "Better Grade", sans-serif;
     font-size: calc(14px + 0.390625vw);
@@ -30,17 +31,29 @@ h3 {
 }
 
 .famalbum .title {
+    font-size: 3em;
     text-align: center;
+    cursor: pointer;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+.famalbum .title:hover {
     text-decoration: 1px wavy underline;
+    transform: translateY(4px);
 }
 
 .famalbum .description {
     text-align: center;
-    font-family: var(--mono-font);
-    font-size: 0.6rem;
-    text-transform: uppercase;
+    font-family: var(--index-serif-font);
+    font-size: 0.7rem;
     max-width: 70%;
     margin: auto;
+    line-height: 1.3;
+}
+
+.famalbum summary {
+    list-style: none;
 }
 
 .famalbum .description a:hover {
@@ -64,6 +77,30 @@ h3 {
 
 .indexnav svg {
     margin-bottom: -3px;
+}
+
+.indexnav:hover {
+    transform: translateY(4px);
+}
+
+.filter button {
+    background-color: transparent;
+    border: 1px solid var(--background-color-3);
+    color: var(--background-color-3);
+    font-family: var(--mono-font);
+    border-radius: 4px;
+    margin: 0 .25rem;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    box-shadow: 5px 5px 0px -3px var(--accent-color-1);
+}
+
+.filter button:active {
+    background-color: var(--accent-color-1);
+    color: var(--background-color-1);
+    border: 1px solid var(--accent-color-1);
 }
 
 #dragdiv {
@@ -107,8 +144,12 @@ h3 {
 }
 
 .famalbum .grid .grid-item .nametitle {
+    font-family: var(--serif-display-2);
     font-size: 1.513em;
     color: var(--accent-color-1);
+    max-width: 90%;
+    text-align: center;
+    margin: 1rem auto;
 }
 
 .famalbum .grid .grid-item .quote {
@@ -147,7 +188,7 @@ h3 {
 }
 
 .famalbum .grid .grid-item.flip {
-    cursor: pointer;
+    cursor: cell;
 }
 
 .famalbum .grid .grid-item.flip .back {
@@ -268,19 +309,27 @@ h3 {
 }
 
 .famalbum footer {
+    padding: .5rem;
+}
+
+.famalbum footer p, .famalbum footer a {
     font-family: var(--sans-serif-font);
     font-size: .5rem;
-    padding: .5rem;
+}
+
+.famalbum footer a {
+    opacity: .7;
+}
+
+.famalbum footer a:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 /* individual pages */
 .storypages {
     display: flex;
     flex-direction: column;
-}
-
-.storypages.latrachi {
-    background-color: var(--background-color-2);
 }
 
 nav {
@@ -302,6 +351,16 @@ nav a:hover {
     color: var(--background-color-1);
 }
 
+.storypages.giovana nav a {
+    border: 1px solid var(--accent-color-1);
+    color: var(--accent-color-1);
+}
+
+.storypages.giovana nav a:hover {
+    background-color: var(--accent-color-1);
+    color: var(--background-color-1);
+}
+
 .transcript {
     column-count: 3;
     gap: 10px;
@@ -319,6 +378,29 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.storypages.latrachi {
+    background-color: var(--background-color-2);
+}
+
+.storypages.latrachi nav a:hover {
+        background-color: var(--accent-color-2);
+        color: var(--background-color-2);
+}
+
+.storypages.giovana {
+    background-color: var(--background-color-1);
+
+}
+
+.storypages.giovana p {
+    color: var(--background-color-2);
+}
+
+.storypages.giovana h1 {
+    color: var(--background-color-3);
+}
+
+
 .storypages h1 {
     margin-bottom: 0;
     color: var(--background-color-1);
@@ -330,10 +412,6 @@ nav a:hover {
 
 .storypages .transcriptonly.threecolumns {
     column-count: 3;
-}
-
-.storypages h1.english {
-    color: var(--accent-color-3);
 }
 
 .storypages p {
@@ -349,7 +427,8 @@ nav a:hover {
     font-weight: 400;
 }
 
-.storypages .english {
+.storypages .english,
+.storypages.giovana p.english {
     color: var(--accent-color-1);
 }
 
@@ -530,13 +609,75 @@ nav a:hover {
     max-width: 45%;
 }
 
+/* Flying Image
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.flier {
+    pointer-events: none;
+}
+
+.flier>* {
+    animation: fly 100s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 999999;
+    max-width: 240px;
+    height: auto;
+}
+
+
+@keyframes fly {
+
+    98.001%,
+    0% {
+        display: block;
+        transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+    }
+
+    15% {
+        transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+    }
+
+    15.001%,
+    18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    }
+
+    40% {
+        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+    }
+
+    40.001%,
+    43% {
+        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+    }
+
+    65% {
+        transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+    }
+
+    65.001%,
+    68% {
+        transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+    }
+
+    95% {
+        transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+    }
+}
+
 /* media breakpoints */
 @media screen and (max-width: 599px) {
     .transcript {
         column-count: 1;
     }
 
-    .storypages .transcriptonly.threecolumns {
+    .storypages .transcriptonly.threecolumns,
+    .storypages .twocolumn {
         column-count: 1;
         margin: 0 2em;
     }
