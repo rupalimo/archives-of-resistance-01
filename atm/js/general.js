@@ -1,4 +1,4 @@
-// Show class
+// Fullpage event
 function getPics() {} 
 const imgs = document.querySelectorAll('.gallery img');
 const fullPage = document.querySelector('#fullpage');
@@ -10,33 +10,46 @@ imgs.forEach(img => {
   });
 });
 
-// shuffle
-const Shuffle = window.Shuffle;
+// Filter buttons
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
-const shuffleWithPadding = new Shuffle(document.querySelector('.js-grid'), {
-  itemSelector: '.js-item',
-  sizer: '.js-sizer',
-  buffer: 1,
-});
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
 
-const shuffleWithAspectRatio = new Shuffle(document.querySelector('.js-aspect-ratio'), {
-  itemSelector: '.js-item',
-  sizer: '.js-sizer',
-  buffer: 1,
-});
-
-let on = true;
-document.getElementById('toggle-images').addEventListener('click', () => {
-  on = !on;
-  const images = Array.from(document.getElementsByTagName('img'));
-  images.forEach((image) => {
-    if (on) {
-      image.style.display = '';
-    } else {
-      image.style.display = 'none';
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
     }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
   });
-  
-  shuffleWithPadding.layout();
-  shuffleWithAspectRatio.layout();
-});
+}
