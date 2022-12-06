@@ -122,11 +122,10 @@ h3 {
 
 .famalbum .grid .grid-item {
     max-width: 14em;
-    display: inline-flex;
     text-align: center;
     margin: 1em;
     flex-direction: column;
-    align-self: first baseline;
+    align-self: center;
     background: var(--background-color-2);
     border: 2px solid var(--accent-color-1);
 }
@@ -250,6 +249,21 @@ h3 {
     background-color: rgba(0, 0, 0, 0.468);
     cursor: zoom-out;
 }
+
+/* filter styling */
+
+.filterDiv {
+    display: none;
+  }
+  
+  .show {
+    display: inline-flex;
+  }
+  
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
 
 /* index & footer main */
 .famalbum .index {

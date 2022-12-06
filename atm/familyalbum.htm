@@ -45,71 +45,56 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
             <h1 class="title">Family Album</h1>
             </summary>
     </details>
-    <div class="filter">
-        <button>all</button><button>images</button><button>stories</button>
+    <div id="fullpage" onclick="this.style.display='none';"></div>
+    <div class="filter" id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">Show all</button>
+        <button class="btn" onclick="filterSelection('images')"> Images</button>
+        <button class="btn" onclick="filterSelection('story')"> Stories</button>
     </div>
-    <div class="grid">
-        <div id="fullpage" onclick="this.style.display='none';"></div>
-        <div class="grid-item">
+    <div class="grid container">
+        
+        
+        
+        <div class="grid-item filterDiv images">
+            <a href="marcela.htm">
+                <img class="thumb" src="assets/marcela/Marcela_1.jpg">
+                <p class="nametitle">Marcela</p>
+            </a>
+        </div>
+        <div class="grid-item filterDiv story images">
             <a href="ElNegroMiguel.htm">
                 <img class="thumb" src="assets/1_el_negro_miguel/FMAG020.jpg">
                 <p class="nametitle">El Negro Miguel</p>
                 <p class="caption">A story read by Magali Muñíz</p>
             </a>
         </div>
-        <div class="grid-item">
+        <div class="grid-item filterDiv story">
+            <a href="giovana.htm">
+                <p class="quote three">"Todo comenzó con una amiga que venía de Milán, ahí yo me pude soltar."</p>
+                <p class="quote three english">"It all started with a friend who came from Milan. After that, I was able
+                    to let go."</p>
+                <p class="nametitle">Giovana Susana la Cona</p>
+                <p class="caption">A story read by Carmen</p>
+            </a>
+        </div>
+        <div class="grid-item filterDiv images">
+            <a href="rosario.htm">
+                <img class="thumb" src="assets/rosario/Rosario_la_Uruguaya_3.jpg">
+                <p class="nametitle">Rosario</p>
+            </a>
+        </div>
+        <div class="grid-item filterDiv story images">
             <a href="LaTrachi.htm">
                 <img class="thumb" src="assets/2_trachi/la_trachi_2.jpg">
                 <p class="nametitle">La Trachyn</p>
                 <p class="caption">An Anecdote about Military Service, read by Magali Muñíz</p>
             </a>
         </div>
-        <div class="grid-item">
-            <a href="MochaCelis.htm">
-                <img class="thumb" src="assets/3_mocha_celis/Lorena_4.jpg">
-                <p class="nametitle">Lorena (Mocha Celis) & The Death of Mocha</p>
-                <p class="caption">A story read by Magali Muñíz</p>
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="marcela.htm">
-                <img class="thumb" src="assets/marcela/Marcela_1.jpg">
-                <p class="nametitle">Marcela</p>
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="rosario.htm">
-                <img class="thumb" src="assets/rosario/Rosario_la_Uruguaya_3.jpg">
-                <p class="nametitle">Rosario</p>
-            </a>
-        </div>
-
-        <div class="grid-item gallery" id="aldana">
+        <div class="grid-item gallery filterDiv images" id="aldana">
             <img class="thumb" src="assets/photos_only/Aldana_Gabriela_Chocobar.jpg">
             <p class="nametitle">Aldana Gabriela Chocobar</p>
         </div>
-        <div class="grid-item gallery" id="claudia">
-            <img class="thumb" src="./assets/photos_only/Claudia.jpg">
-            <p class="nametitle">Claudia Pía Baudracco</p>
-        </div>
-        <div class="grid-item gallery" id="mónica">
-            <img class="thumb" src="./assets/photos_only/Monica.jpg">
-            <p class="nametitle">Mónica Andrada</p>
-        </div>
-        <div class="grid-item gallery" id="pamela">
-            <img class="thumb" src="./assets/photos_only/Pamela.jpg">
-            <p class="nametitle">Pamela Rodríguez</p>
-        </div>
-        <div class="grid-item gallery" id="raquel">
-            <img class="thumb" src="./assets/photos_only/RaquelLeiva.jpg">
-            <p class="nametitle">Raquel Leiva</p>
-        </div>
-        <div class="grid-item flip" id="sofía">
-            <img class="thumb front" src="./assets/photos_only/Sofia.jpg">
-            <img class="thumb back" src="./assets/photos_only/Sofia_Back.jpg">
-            <p class="nametitle">Sofía Saunier</p>
-        </div>
-        <div class="grid-item">
+        <div class="grid-item filterDiv story">
             <a href="cyntia.htm">
                 <p class="quote one">"Marcela me ofreció un techo, un amor, junto con ella comencé una nueva vida. La
                     pérdida de Marcela fue muy fuerte para mí."</p>
@@ -119,7 +104,18 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
                 <p class="caption">A story read by Belén</p>
             </a>
         </div>
-        <div class="grid-item">
+        <div class="grid-item filterDiv story images">
+            <a href="MochaCelis.htm">
+                <img class="thumb" src="assets/3_mocha_celis/Lorena_4.jpg">
+                <p class="nametitle">Lorena (Mocha Celis) & The Death of Mocha</p>
+                <p class="caption">A story read by Magali Muñíz</p>
+            </a>
+        </div>
+        <div class="grid-item gallery filterDiv images" id="claudia">
+            <img class="thumb" src="./assets/photos_only/Claudia.jpg">
+            <p class="nametitle">Claudia Pía Baudracco</p>
+        </div>
+        <div class="grid-item filterDiv story">
             <a href="evelyn.htm">
                 <p class="quote two">"Evelyn nació así: no se si conocieron pero había un coreógrafo muy conocido en
                     Argentina que se llamaba Eric Zepeda."</p>
@@ -129,15 +125,27 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
                 <p class="caption">A story read by Magali Muñíz</p>
             </a>
         </div>
-        <div class="grid-item">
-            <a href="giovana.htm">
-                <p class="quote three">"Todo comenzó con una amiga que venía de Milán, ahí yo me pude soltar."</p>
-                <p class="quote three english">"It all started with a friend who came from Milan. After that, I was able
-                    to let go."</p>
-                <p class="nametitle">Giovana Susana la Cona</p>
-                <p class="caption">A story read by Carmen</p>
-            </a>
+        <div class="grid-item gallery filterDiv images" id="mónica">
+            <img class="thumb" src="./assets/photos_only/Monica.jpg">
+            <p class="nametitle">Mónica Andrada</p>
         </div>
+        <div class="grid-item gallery filterDiv images" id="pamela">
+            <img class="thumb" src="./assets/photos_only/Pamela.jpg">
+            <p class="nametitle">Pamela Rodríguez</p>
+        </div>
+        <div class="grid-item gallery filterDiv images" id="raquel">
+            <img class="thumb" src="./assets/photos_only/RaquelLeiva.jpg">
+            <p class="nametitle">Raquel Leiva</p>
+        </div>
+        
+        <div class="grid-item flip filterDiv images" id="sofía">
+            <img class="thumb front" src="./assets/photos_only/Sofia.jpg">
+            <img class="thumb back" src="./assets/photos_only/Sofia_Back.jpg">
+            <p class="nametitle">Sofía Saunier</p>
+        </div>
+        
+        
+        
     </div>
     <div id="index" class="index">
         <h2>Content</h2>
