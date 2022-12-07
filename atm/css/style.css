@@ -61,7 +61,8 @@ h3 {
     list-style: none;
 }
 
-.famalbum .description a:hover, .famalbum .description a:active {
+.famalbum .description a:hover,
+.famalbum .description a:active {
     background-color: var(--background-color-3);
 }
 
@@ -612,7 +613,8 @@ body.giovana {
     color: var(--accent-color-2);
 }
 
-.storypages.evelyn p, .storypages.evelyn .transcriptonly h1 {
+.storypages.evelyn p,
+.storypages.evelyn .transcriptonly h1 {
     color: #FF7A00;
 }
 
@@ -941,9 +943,23 @@ body.giovana {
     }
 
     body.evelyn {
-        height: 100%;}
-    
-        .evelyn .column {
-            padding: 1rem 0;
-        }
+        height: 100%;
+    }
+
+    .evelyn .column {
+        padding: 1rem 0;
+    }
+
+    .famalbum .grid .grid-item.flip:hover .back {
+        max-width: 18em;
+    }
+
+    .famalbum .index {
+        font-size: 1rem;
+    }
+
+    .famalbum footer p,
+    .famalbum footer a {
+        font-size: .7rem;
+    }
 }
