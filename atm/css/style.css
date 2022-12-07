@@ -61,7 +61,7 @@ h3 {
     list-style: none;
 }
 
-.famalbum .description a:hover {
+.famalbum .description a:hover, .famalbum .description a:active {
     background-color: var(--background-color-3);
 }
 
@@ -891,6 +891,33 @@ body.giovana {
     .rosario #container img:nth-of-type(7) {
         top: 140%;
     }
+
+    .evelyn .container {
+        flex-direction: column;
+    }
+
+    .elnegromiguel .gallery {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .elnegromiguel .gallery img {
+        max-width: 11em;
+    }
+
+    .preloader {
+        left: 30%;
+        margin-left: auto;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+
+    .transcript .twocolumn {
+        padding: 0 !important;
+    }
 }
 
 @media screen and (max-width:890px) {
@@ -912,4 +939,11 @@ body.giovana {
     .storypages button.audio {
         margin: 1rem;
     }
+
+    body.evelyn {
+        height: 100%;}
+    
+        .evelyn .column {
+            padding: 1rem 0;
+        }
 }
