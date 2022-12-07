@@ -31,11 +31,15 @@ h3 {
 }
 
 .famalbum .title {
-    font-size: 3em;
+    font-family: "aguafina script";
+    font-size: 4em;
+    letter-spacing: -0.01em;
+    font-weight: 100;
+    line-height: 2em;
     text-align: center;
     cursor: help;
     width: fit-content;
-    margin: 2rem auto;
+    margin: 2rem auto 0;
 }
 
 .famalbum .title:hover {
@@ -199,27 +203,10 @@ h3 {
 .famalbum .grid .grid-item.flip:hover .back {
     display: block;
     position: absolute;
-    max-width: 18em;
+    max-width: 14em;
     mix-blend-mode: normal;
+    transition: 1s ease;
 }
-
-/* .famalbum .grid .grid-item.flip {
-    transition: 1s;
-    cursor: pointer;
-}
-
-.famalbum .grid .grid-item .back {
-    position: absolute;
-    width: 14em;
-    transform: translateX(100px) scaleX(0);
-    transform-origin: left;
-    transition: transform 3s ease;
-    mix-blend-mode: normal;
-}
-
-.famalbum .grid .grid-item.flip:hover .back {
-    transform: translateX(0em) scale(1);
-} */
 
 .grid-item:hover .more-info i {
     padding-left: 20px;
@@ -410,11 +397,6 @@ nav a:hover {
     color: var(--background-color-2);
 }
 
-.storypages.giovana {
-    background-color: var(--background-color-1);
-
-}
-
 .storypages.giovana p {
     color: var(--background-color-2);
 }
@@ -560,8 +542,13 @@ body.cyntia {
     background: linear-gradient(180deg, rgba(234, 235, 216, 0) 0%, rgba(229, 235, 196, 0.65) 100%);
 }
 
-body.mocha {
+body.evelyn {
     background: linear-gradient(180deg, rgba(186, 220, 239, 0) 0%, rgba(186, 220, 239, 0.5) 100%);
+    height: 100vh;
+}
+
+body.giovana {
+    background: linear-gradient(180deg, #434318 0%, #828243 100%);
 }
 
 .elnegromiguel .container {
@@ -569,17 +556,17 @@ body.mocha {
     flex-direction: row;
 }
 
-.elnegromiguel .container .column:nth-of-type(1) {
-    margin-right: 5em;
-    margin-left: 3%;
+.elnegromiguel .column {
+    padding: 0 2rem;
 }
 
 .elnegromiguel button.audio {
     margin-top: 1em;
 }
 
-.elnegromiguel .gallery img {
-    margin: 1em;
+.elnegromiguel .gallery {
+    display: flex;
+    justify-content: space-around;
 }
 
 .elnegromiguel .gallery img:hover {
@@ -618,6 +605,21 @@ body.mocha {
     top: 430%;
 }
 
+
+
+.storypages.evelyn button.audio:hover {
+    background-color: #FF7A00;
+    color: var(--accent-color-2);
+}
+
+.storypages.evelyn p, .storypages.evelyn .transcriptonly h1 {
+    color: #FF7A00;
+}
+
+.storypages.evelyn .english {
+    color: var(--accent-color-2);
+}
+
 .evelyn .container {
     display: flex;
     flex-direction: row;
@@ -625,6 +627,7 @@ body.mocha {
 
 .evelyn .column {
     padding: 3em;
+    padding-top: 1rem;
 }
 
 .gallerypages {
@@ -644,6 +647,7 @@ body.mocha {
 
 .gallerypages .gallery img {
     max-width: 40em;
+    height: auto;
 }
 
 .gallerypages .gallery img:hover {
@@ -672,7 +676,8 @@ body.mocha {
 }
 
 .transcript .twocolumn {
-    padding: 3rem;
+    padding: 2rem;
+    padding-top: 1rem;
     max-width: 45%;
 }
 
@@ -734,6 +739,53 @@ body.mocha {
 
     95% {
         transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+    }
+}
+
+/* loader screen */
+#overlayer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: var(--background-color-1);
+}
+
+.preloader {
+    z-index: 3;
+    position: absolute;
+    width: 10em;
+    top: 20%;
+    left: 50%;
+    margin: auto;
+    margin-left: -3em;
+}
+
+.preloader p {
+    font-family: var(--handwritten-font);
+    color: var(--background-color-3);
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.loading {
+    width: 8em;
+    animation: loading 5.3s linear infinite;
+    margin-left: 1em;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
