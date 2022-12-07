@@ -15,11 +15,30 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
     <meta name="description"
         content="An Online Exhibition from the Second Editions of Archives of Resistance, Northern Migration">
     <title>AOR / Family Album by ATM</title>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
 </head>
 
 <body class="famalbum">
-    <!--hidden until script is tweaked <button id="">category buttons</button> -->
-    <a class="indexnav" href="#index">index <svg width="16" height="21" viewBox="0 0 16 21" fill="none"
+    <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loading">
+            <svg class="loadercircle" width="187" height="181" viewBox="0 0 187 181" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle r="84.1773" transform="matrix(-1 0 0 1 85.1772 85.1773)" stroke="var(--background-color-3)"
+                    stroke-width="2" stroke-dasharray="28 28" />
+                <path d="M27.1992 48.0412L26.5361 24.8311H4.36809" stroke="var(--background-color-3)"
+                    stroke-width="2" />
+                <path d="M153.589 75.4788L168.895 92.9393L185.975 78.8084" stroke="var(--background-color-3)"
+                    stroke-width="2" />
+                <path d="M66.0753 151.302L44.1112 158.834L50.6997 180" stroke="var(--background-color-3)"
+                    stroke-width="2" />
+            </svg>
+        </div>
+        <p>loading ...</p>
+    </div>
+    <a class="indexnav" href="#index">index <svg class="arrow" width="16" height="21" viewBox="0 0 16 21" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M8 0L8 20" stroke="var(--accent-color-1)" stroke-width="1.3" />
             <path d="M1 12L7.91765 19.7372" stroke="var(--accent-color-1)" stroke-width="1.3" />
@@ -29,21 +48,28 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
     <div class="flier">
         <img src="./assets/extra/FJC025.jpg">
     </div>
-    
+
     <details>
-        <p class="description"><i>Family Album,</i> is the second exhibition from <a href="https://archivotrans.ar/">Archives of Resistance:
-            Northern Migration</a> showcasing a selection of photographs and stories in <a href="../index.htm">Archivo de la Memoria
-        Trans/Archive of Trans Memory (ATM)</a> from Buenos Aires, Argentina. This exhibition illustrates narratives of
-        friendship, love, resistance and hardship narrated by the Trans women in this community. This collection of
-        photographs, mainly from the 1980s, gives us insight into the lives of the Argentine Trans community before the
-        Gender Identity Law was passed in 2012. Prior to this law, it was illegal to cross-dress in Argentina despite
-        the visibility of Trans women in carnival parades. Today, Trans people in Argentina have the legal right to live
-        their true identities thanks to the mobilization and perseverance that the older generation of Trans people
-        suffered in Argentina. Many of the Trans women featured in this exhibition were exiled or have passed away. Here
-        are some of their stories. </p>
+        <p class="description"><i>Family Album,</i> is the second exhibition from <a
+                href="https://archivotrans.ar/">Archives of Resistance:
+                Northern Migration</a> showcasing a selection of photographs and stories in <a
+                href="../index.htm">Archivo de la Memoria
+                Trans/Archive of Trans Memory (ATM)</a> from Buenos Aires, Argentina. This exhibition illustrates
+            narratives of
+            friendship, love, resistance and hardship narrated by the Trans women in this community. This collection of
+            photographs, mainly from the 1980s, gives us insight into the lives of the Argentine Trans community before
+            the
+            Gender Identity Law was passed in 2012. Prior to this law, it was illegal to cross-dress in Argentina
+            despite
+            the visibility of Trans women in carnival parades. Today, Trans people in Argentina have the legal right to
+            live
+            their true identities thanks to the mobilization and perseverance that the older generation of Trans people
+            suffered in Argentina. Many of the Trans women featured in this exhibition were exiled or have passed away.
+            Here
+            are some of their stories. </p>
         <summary>
             <h1 class="title">Family Album</h1>
-            </summary>
+        </summary>
     </details>
     <div id="fullpage" onclick="this.style.display='none';"></div>
     <div class="filter" id="myBtnContainer">
@@ -52,9 +78,10 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
         <button class="btn" onclick="filterSelection('story')"> Stories</button>
     </div>
     <div class="grid container">
-        
-        
-        
+        <div class="grid-item gallery filterDiv images" id="mónica">
+            <img class="thumb" src="./assets/photos_only/Monica.jpg">
+            <p class="nametitle">Mónica Andrada</p>
+        </div>
         <div class="grid-item filterDiv images">
             <a href="marcela.htm">
                 <img class="thumb" src="assets/marcela/Marcela_1.jpg">
@@ -77,22 +104,12 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
                 <p class="caption">A story read by Carmen</p>
             </a>
         </div>
-        <div class="grid-item filterDiv images">
-            <a href="rosario.htm">
-                <img class="thumb" src="assets/rosario/Rosario_la_Uruguaya_3.jpg">
-                <p class="nametitle">Rosario</p>
-            </a>
-        </div>
         <div class="grid-item filterDiv story images">
             <a href="LaTrachi.htm">
                 <img class="thumb" src="assets/2_trachi/la_trachi_2.jpg">
                 <p class="nametitle">La Trachyn</p>
                 <p class="caption">An Anecdote about Military Service, read by Magali Muñíz</p>
             </a>
-        </div>
-        <div class="grid-item gallery filterDiv images" id="aldana">
-            <img class="thumb" src="assets/photos_only/Aldana_Gabriela_Chocobar.jpg">
-            <p class="nametitle">Aldana Gabriela Chocobar</p>
         </div>
         <div class="grid-item filterDiv story">
             <a href="cyntia.htm">
@@ -102,6 +119,16 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
                     of Marcela was very hard for me."</p>
                 <p class="nametitle">Cintia Anahi Pili</p>
                 <p class="caption">A story read by Belén</p>
+            </a>
+        </div>
+        <div class="grid-item gallery filterDiv images" id="aldana">
+            <img class="thumb" src="assets/photos_only/Aldana_Gabriela_Chocobar.jpg">
+            <p class="nametitle">Aldana Gabriela Chocobar</p>
+        </div>
+        <div class="grid-item filterDiv images">
+            <a href="rosario.htm">
+                <img class="thumb" src="assets/rosario/Rosario_la_Uruguaya_3.jpg">
+                <p class="nametitle">Rosario</p>
             </a>
         </div>
         <div class="grid-item filterDiv story images">
@@ -115,6 +142,10 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
             <img class="thumb" src="./assets/photos_only/Claudia.jpg">
             <p class="nametitle">Claudia Pía Baudracco</p>
         </div>
+        <div class="grid-item gallery filterDiv images" id="pamela">
+            <img class="thumb" src="./assets/photos_only/Pamela.jpg">
+            <p class="nametitle">Pamela Rodríguez</p>
+        </div>
         <div class="grid-item filterDiv story">
             <a href="evelyn.htm">
                 <p class="quote two">"Evelyn nació así: no se si conocieron pero había un coreógrafo muy conocido en
@@ -125,28 +156,17 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
                 <p class="caption">A story read by Magali Muñíz</p>
             </a>
         </div>
-        <div class="grid-item gallery filterDiv images" id="mónica">
-            <img class="thumb" src="./assets/photos_only/Monica.jpg">
-            <p class="nametitle">Mónica Andrada</p>
-        </div>
-        <div class="grid-item gallery filterDiv images" id="pamela">
-            <img class="thumb" src="./assets/photos_only/Pamela.jpg">
-            <p class="nametitle">Pamela Rodríguez</p>
-        </div>
         <div class="grid-item gallery filterDiv images" id="raquel">
             <img class="thumb" src="./assets/photos_only/RaquelLeiva.jpg">
             <p class="nametitle">Raquel Leiva</p>
         </div>
-        
         <div class="grid-item flip filterDiv images" id="sofía">
             <img class="thumb front" src="./assets/photos_only/Sofia.jpg">
             <img class="thumb back" src="./assets/photos_only/Sofia_Back.jpg">
             <p class="nametitle">Sofía Saunier</p>
         </div>
-        
-        
-        
     </div>
+    <!-- table of contents -->
     <div id="index" class="index">
         <h2>Content</h2>
         <ul class="headers">
@@ -195,15 +215,13 @@ Page hand coded by Elina Tanaka @tanaka.jpeg -->
             </li>
         </ul>
     </div>
-
     <footer>
         <p>
-        stories & images from <a href="https://archivotrans.ar/">ATM</a><br>
-        hand-coded by <a href="http://www.tanakajpeg.com">E Tanaka</a><br>
-        back to <a href="../index.htm">Archives of Resistance</a></p>
+            stories & images from <a href="https://archivotrans.ar/">ATM</a><br>
+            hand-coded by <a href="http://www.tanakajpeg.com">E Tanaka</a><br>
+            back to <a href="../index.htm">Archives of Resistance</a></p>
     </footer>
     <script src="js/general.js" defer></script>
-    <script src="js/drag.js" defer></script>
 </body>
 
 

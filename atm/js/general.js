@@ -53,3 +53,9 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+// loader
+   $(window).load(function() {
+   $(".preloader").delay(1000).fadeOut("slow");
+   $("#overlayer").delay(1000).fadeOut("slow");
+   })
