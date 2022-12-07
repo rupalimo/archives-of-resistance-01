@@ -33,7 +33,7 @@ h3 {
 .famalbum .title {
     font-size: 3em;
     text-align: center;
-    cursor: pointer;
+    cursor: help;
     width: fit-content;
     margin: 2rem auto;
 }
@@ -50,6 +50,7 @@ h3 {
     max-width: 70%;
     margin: auto;
     line-height: 1.3;
+    padding-bottom: 2rem;
 }
 
 .famalbum summary {
@@ -73,6 +74,7 @@ h3 {
     position: absolute;
     right: 1rem;
     text-transform: uppercase;
+    cursor: help;
 }
 
 .indexnav svg {
@@ -197,7 +199,7 @@ h3 {
 .famalbum .grid .grid-item.flip:hover .back {
     display: block;
     position: absolute;
-    width: 14em;
+    max-width: 18em;
     mix-blend-mode: normal;
 }
 
@@ -254,16 +256,16 @@ h3 {
 
 .filterDiv {
     display: none;
-  }
-  
-  .show {
+}
+
+.show {
     display: inline-flex;
-  }
-  
-  .container {
+}
+
+.container {
     margin-top: 20px;
     overflow: hidden;
-  }
+}
 
 /* index & footer main */
 .famalbum .index {
@@ -326,7 +328,8 @@ h3 {
     padding: .5rem;
 }
 
-.famalbum footer p, .famalbum footer a {
+.famalbum footer p,
+.famalbum footer a {
     font-family: var(--sans-serif-font);
     font-size: .5rem;
 }
@@ -365,6 +368,12 @@ nav a:hover {
     color: var(--background-color-1);
 }
 
+.storypages nav a:hover {
+    background-color: var(--accent-color-2);
+    color: var(--background-color-3);
+    border: 1px solid var(--background-color-3);
+}
+
 .storypages.giovana nav a {
     border: 1px solid var(--accent-color-1);
     color: var(--accent-color-1);
@@ -397,8 +406,8 @@ nav a:hover {
 }
 
 .storypages.latrachi nav a:hover {
-        background-color: var(--accent-color-2);
-        color: var(--background-color-2);
+    background-color: var(--accent-color-2);
+    color: var(--background-color-2);
 }
 
 .storypages.giovana {
@@ -484,28 +493,29 @@ nav a:hover {
     justify-content: space-between;
 }
 
-.gallery img#draggable-elem:nth-child(1) {
+/* la mocha row image placement */
+
+.mocha .gallery img#draggable-elem:nth-child(1) {
     left: 14%;
 }
 
-.gallery img#draggable-elem:nth-child(2) {
+.mocha .gallery img#draggable-elem:nth-child(2) {
     left: 37%;
     top: 25%;
 }
 
-.gallery img#draggable-elem:nth-child(3) {
+.mocha .gallery img#draggable-elem:nth-child(3) {
     left: 37%;
     top: 80%;
 }
 
-.gallery img#draggable-elem:nth-child(4) {
+.mocha .gallery img#draggable-elem:nth-child(4) {
     left: 59%;
 }
 
-.gallery img#draggable-elem:nth-child(5) {
+.mocha .gallery img#draggable-elem:nth-child(5) {
     left: 80%;
 }
-
 
 .galleryonly img {
     max-width: 33%;
@@ -544,6 +554,16 @@ nav a:hover {
     z-index: 2;
 }
 
+/* gradients ? */
+
+body.cyntia {
+    background: linear-gradient(180deg, rgba(234, 235, 216, 0) 0%, rgba(229, 235, 196, 0.65) 100%);
+}
+
+body.mocha {
+    background: linear-gradient(180deg, rgba(186, 220, 239, 0) 0%, rgba(186, 220, 239, 0.5) 100%);
+}
+
 .elnegromiguel .container {
     display: flex;
     flex-direction: row;
@@ -551,6 +571,7 @@ nav a:hover {
 
 .elnegromiguel .container .column:nth-of-type(1) {
     margin-right: 5em;
+    margin-left: 3%;
 }
 
 .elnegromiguel button.audio {
@@ -565,6 +586,38 @@ nav a:hover {
     transform: rotate(-5deg);
 }
 
+.rosario #container img {
+    left: 50%;
+}
+
+.rosario #container img:nth-of-type(1) {
+    top: 42%;
+}
+
+.rosario #container img:nth-of-type(2) {
+    top: 107%;
+}
+
+.rosario #container img:nth-of-type(3) {
+    top: 175%;
+}
+
+.rosario #container img:nth-of-type(4) {
+    top: 241%;
+}
+
+.rosario #container img:nth-of-type(5) {
+    top: 298%;
+}
+
+.rosario #container img:nth-of-type(6) {
+    top: 364%;
+}
+
+.rosario #container img:nth-of-type(7) {
+    top: 430%;
+}
+
 .evelyn .container {
     display: flex;
     flex-direction: row;
@@ -575,8 +628,8 @@ nav a:hover {
 }
 
 .gallerypages {
-    background-color: var(--accent-color-3);
-    color: var(--background-color-1);
+    background-color: var(--background-color-1);
+    color: var(--accent-color-1);
 }
 
 .gallerypages .gallery {
@@ -688,12 +741,15 @@ nav a:hover {
 @media screen and (max-width: 599px) {
     .transcript {
         column-count: 1;
+        flex-direction: column;
     }
 
     .storypages .transcriptonly.threecolumns,
     .storypages .twocolumn {
         column-count: 1;
-        margin: 0 2em;
+        margin: auto;
+        max-width: 100%;
+        padding: 0;
     }
 
     .gallerypages .gallery img {
@@ -706,7 +762,102 @@ nav a:hover {
         background-size: contain;
     }
 
+    .famalbum .title {
+        padding-top: 2rem;
+    }
+
+    .famalbum p.description {
+        font-size: 1rem;
+        max-width: 98%;
+        margin: auto;
+        line-height: 1.3;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--accent-color-1);
+        margin-bottom: 2rem;
+    }
+
     .famalbum .grid .grid-item {
-        max-width: 11em;
+        max-width: 18em;
+    }
+
+    .gallery img#draggable-elm {
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+
+    .famalbum .index ul.headers {
+        column-count: 1;
+    }
+
+    .famalbum .index li.border {
+        border-right: 0;
+    }
+
+    .storypages h1.english {
+        padding-bottom: .5rem;
+    }
+
+    .elnegromiguel .container {
+        flex-direction: column;
+    }
+
+    .elnegromiguel .container .column:nth-of-type(1) {
+        margin: auto;
+    }
+
+    .elnegromiguel .container .column:nth-of-type(2) {
+        text-align: center;
+    }
+
+    /* rosario photo alignment */
+
+    .rosario #container img:nth-of-type(1) {
+        top: 20%;
+    }
+
+    .rosario #container img:nth-of-type(2) {
+        top: 40%;
+    }
+
+    .rosario #container img:nth-of-type(3) {
+        top: 60%;
+    }
+
+    .rosario #container img:nth-of-type(4) {
+        top: 80%;
+    }
+
+    .rosario #container img:nth-of-type(5) {
+        top: 100%;
+    }
+
+    .rosario #container img:nth-of-type(6) {
+        top: 120%;
+    }
+
+    .rosario #container img:nth-of-type(7) {
+        top: 140%;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .storypages h1 {
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    .transcript.bisect {
+        display: inline;
+        column-count: 1;
+    }
+
+    .transcript .twocolumn {
+        padding: 0 3rem;
+        max-width: 100%;
+    }
+
+    .storypages button.audio {
+        margin: 1rem;
     }
 }
