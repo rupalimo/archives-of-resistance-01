@@ -50,7 +50,7 @@ h3 {
 .famalbum .description {
     text-align: center;
     font-family: var(--index-serif-font);
-    font-size: 0.7rem;
+    font-size: 1rem;
     max-width: 70%;
     margin: auto;
     line-height: 1.3;
