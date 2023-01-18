@@ -83,11 +83,10 @@ p {
 .hovericons .wave {
     position: absolute;
     overflow: hidden;
-    width: 14.5em;
-    height: 13.7em;
+    width: 3em;
+    padding: 7em;
     top: 0;
-    right: 0.1rem;
-    margin: 1rem 0 2rem 0;
+    right: 0;
 }
 
 .hovericons .star {
@@ -108,8 +107,8 @@ p {
 
 /* hover animations */
 .hovericons .moon:hover img {
-    animation: rotate 3s infinite;
-    -webkit-animation: rotate 3s infinite;
+    animation: slide 3s infinite;
+    -webkit-animation: slide 3s infinite;
 }
 
 .hovericons .moon:hover {
@@ -141,7 +140,8 @@ p {
 }
 
 .hovericons .wave:hover img {
-    animation: wave 3s ease-in-out infinite;
+    -webkit-animation: scale 3s ease-in-out infinite;
+    animation: scale 3s ease-in-out infinite;
 }
 
 .hovericons .wave:hover {
@@ -459,6 +459,16 @@ a {
     overflow: hidden;
 }
 
+/* outside video colors */
+
+.blue #toggleDisplay {
+    background-color: var(--accent-color-1);
+    color: var(--accent-color-5);
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid transparent;
+    border-image: url(../assets/img/textura-blue.jpg) 30% round;
+}
+
 /* video 0 */
 .item-link.intro #introBox {
     z-index: 99;
@@ -508,13 +518,11 @@ a {
 }
 
 .item-link.zero .show-icon {
-    top: 0;
-    right: 0;
-    margin: 1rem;
+    top: 20.7em;
+    left: 36.9em;
     height: 2rem;
-    background-color: transparent;
+    background-color: var(--accent-color-1);
     border: 3px solid var(--accent-color-1);
-    color: transparent;
     width: 2rem;
     border-radius: 100%;
 }
@@ -522,37 +530,11 @@ a {
 .item-link.zero .show-icon:hover {
     cursor: pointer;
     color: transparent;
-    animation: wobble 5s ease-in-out infinite;
+    background-color: transparent;
 }
 
 .item-link.zero .close-icon {
     right: 2rem;
-}
-
-@keyframes wobble {
-    0% {
-        border-radius: 100%;
-    }
-
-    10% {
-        border-radius: 750px 550px 350px 750px / 350px 750px 550px 450px;
-    }
-
-    25% {
-        border-radius: 50%;
-    }
-
-    50% {
-        border-radius: 750px 550px 350px 750px / 350px 750px 550px 450px;
-    }
-
-    90% {
-        border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
-    }
-
-    100% {
-        border-radius: 90%;
-    }
 }
 
 .bg_gif {
@@ -588,7 +570,7 @@ zero #toggleDisplay video {
     padding-top: 15%;
 }
 
-/* video 1 */
+/* video 1, item 1 */
 
 .item-link.one .show-icon {
     top: 7em;
@@ -610,10 +592,6 @@ zero #toggleDisplay video {
     width: 40em;
     margin-left: 16em;
     margin-top: 10em;
-    background-color: var(--background-color-1);
-    border-top: 21px solid transparent;
-    border-bottom: 21px solid transparent;
-    border-image: url(../assets/img/textura-02.png) 30% round;
 }
 
 .item-link.one .show .left {
@@ -653,7 +631,7 @@ zero #toggleDisplay video {
     border-image: url(../assets/img/textura-03.png) 30% round;
 }
 
-/* video 3 */
+/* video 8, item 3 */
 .item-link.three .show-icon {
     top: 17.4em;
     left: 23em;
@@ -672,8 +650,6 @@ zero #toggleDisplay video {
 
 .three #toggleDisplay {
     right: 0;
-    background-color: var(--accent-color-1);
-    color: var(--accent-color-5);
     width: 30em;
     margin-right: 5em;
     margin-top: 10em;
@@ -743,7 +719,7 @@ zero #toggleDisplay video {
     color: var(--background-color-2);
 }
 
-/* video 6 */
+/* video 2, item 6 */
 .item-link.six .show-icon {
     top: 17.4em;
     left: 48.9em;
@@ -762,11 +738,6 @@ zero #toggleDisplay video {
     margin-top: 10em;
     margin-left: 5em;
     width: 30em;
-    background-color: var(--accent-color-1);
-    color: var(--background-color-1);
-    border-top: 21px solid transparent;
-    border-bottom: 21px solid transparent;
-    border-image: url(../assets/img/textura-01.png) 30% round;
 }
 
 .item-link.six .show-icon video {
@@ -825,8 +796,6 @@ zero #toggleDisplay video {
 }
 
 .item-link.eight #toggleDisplay {
-    background-color: var(--accent-color-1);
-    color: var(--accent-color-5);
     margin-left: 16em;
     margin-top: 1rem;
     border-top: 21px solid transparent;
@@ -861,10 +830,10 @@ zero #toggleDisplay video {
     }
 
     .hovericons .wave {
-        width: 15.7em;
-        height: 15.7em;
-        margin: 0rem -1rem 2rem 0;
+        top: 0;
         right: 0;
+        width: 3em;
+        padding: 7em;
     }
 
     .circlewide {
@@ -1024,22 +993,9 @@ zero #toggleDisplay video {
 
     .hovericons .moon,
     .hovericons .star,
-    .hovericons .sun {
+    .hovericons .sun, .hovericons .wave {
         width: 2em;
         padding: 5em;
-    }
-
-    .hovericons .wave {
-        width: 9.5em;
-        height: 8.7em;
-        right: 0.3rem;
-    }
-
-    .hovericons .wave img {
-        width: 13rem;
-        height: 13rem;
-        margin-left: -3rem;
-        margin-top: -2rem;
     }
 
     .zero #toggleDisplay .left {
