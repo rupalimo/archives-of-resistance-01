@@ -41,6 +41,14 @@ h1 {
 p {
     font-size: 0.9rem;
     line-height: 1.302em;
+    cursor: text;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .hovericons {
@@ -72,7 +80,7 @@ p {
     -webkit-animation: rotate 280s infinite;
 }
 
-.hovericons .moon {
+.hovericons .hovericon_1 {
     top: 0;
     left: 0;
     position: absolute;
@@ -80,7 +88,7 @@ p {
     padding: 7em;
 }
 
-.hovericons .wave {
+.hovericons .hovericon_2 {
     position: absolute;
     overflow: hidden;
     width: 3em;
@@ -89,7 +97,7 @@ p {
     right: 0;
 }
 
-.hovericons .star {
+.hovericons .hovericon_3 {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -97,7 +105,7 @@ p {
     padding: 7em;
 }
 
-.hovericons .sun {
+.hovericons .hovericon_4 {
     bottom: 0;
     right: 0;
     position: absolute;
@@ -106,46 +114,46 @@ p {
 }
 
 /* hover animations */
-.hovericons .moon:hover img {
+.hovericons .hovericon_1:hover img {
+    animation: scale 3s infinite;
+    -webkit-animation: scale 3s infinite;
+}
+
+.hovericons .hovericon_1:hover {
+    cursor: url("../assets/cursor/box.png"), auto !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hovericons .hovericon_4:hover img {
     animation: slide 3s infinite;
     -webkit-animation: slide 3s infinite;
 }
 
-.hovericons .moon:hover {
+.hovericons .hovericon_4:hover {
     cursor: url("../assets/cursor/plant.png"), auto !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.hovericons .sun:hover img {
-    animation: rotate 3s infinite;
-    -webkit-animation: rotate 3s infinite;
+.hovericons .hovericon_3:hover img {
+    -webkit-animation: rotate 3s ease-in-out infinite;
+    animation: rotate 3s ease-in-out infinite;
 }
 
-.hovericons .sun:hover {
+.hovericons .hovericon_3:hover {
     cursor: url("../assets/cursor/sun.png"), auto !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.hovericons .star:hover img {
+.hovericons .hovericon_2:hover img {
     -webkit-animation: scale 3s ease-in-out infinite;
     animation: scale 3s ease-in-out infinite;
 }
 
-.hovericons .star:hover {
+.hovericons .hovericon_2:hover {
     cursor: url("../assets/cursor/star.png"), auto !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.hovericons .wave:hover img {
-    -webkit-animation: scale 3s ease-in-out infinite;
-    animation: scale 3s ease-in-out infinite;
-}
-
-.hovericons .wave:hover {
-    cursor: url("../assets/cursor/box.png"), auto !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -198,7 +206,7 @@ p {
     }
 }
 
-@keyframes wave {
+@keyframes hovericon_2 {
     0% {
         transform: translate(0);
     }
@@ -278,6 +286,7 @@ a {
     animation-name: slideleft;
     animation-duration: 1.7s;
 }
+
 /* left to right */
 @keyframes slideleft {
     0% {
@@ -288,6 +297,7 @@ a {
         transform: translateX(0);
     }
 }
+
 /* right to left */
 .rightfade .show {
     animation-name: slideright;
@@ -303,8 +313,9 @@ a {
         transform: translateX(0);
     }
 }
+
 /* top to bottom going down */
-.topfade .show{
+.topfade .show {
     animation-name: slideup;
     animation-duration: 1.7s;
 }
@@ -320,7 +331,7 @@ a {
 }
 
 /* bottom to top going up */
-.botfade .show{
+.botfade .show {
     animation-name: slidedown;
     animation-duration: 1.7s;
 }
@@ -376,6 +387,7 @@ a {
 #toggleDisplay video {
     max-height: 80vh;
 }
+
 /* text positioning */
 #toggleDisplay p,
 #toggleDisplay h1 {
@@ -386,11 +398,17 @@ a {
     display: flex;
     padding: 1rem;
     width: 96%;
-    }
-    .eng0, .spanish0 {
-        width: 46%;
-    }
-.eng0, .spanish0, .eng, .spanish {
+}
+
+.eng0,
+.spanish0 {
+    width: 46%;
+}
+
+.eng0,
+.spanish0,
+.eng,
+.spanish {
     text-align: justify;
     padding: .5rem;
 }
@@ -470,6 +488,40 @@ a {
 }
 
 /* video 0 */
+
+section#ngoymalayin {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color-1);
+    z-index: 999;
+    position: absolute;
+}
+
+#desktopbutton {
+    background: transparent;
+    border: none;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#desktopbutton img {
+    width: 90%;
+}
+
+.hidebutton {
+    top: 0;
+    right: 0;
+    background-color: var(--background-color-1);
+    color: var(--accent-color-1);
+    border: none;
+    padding: 1em;
+    position: absolute;
+}
+
 .item-link.intro #introBox {
     z-index: 99;
     position: relative;
@@ -812,8 +864,8 @@ zero #toggleDisplay video {
     .framework {
         position: absolute;
         height: 34em;
-        top: 10%;
         left: 30em;
+        top: 4.5em;
         z-index: -1;
     }
 
@@ -823,17 +875,23 @@ zero #toggleDisplay video {
     }
 
     .hovericons {
-        left: 30em;
-        height: 32em;
+        left: 31.5em;
+        height: 31.5em;
         width: 32em;
-        top: 12%;
+        top: 6em;
     }
 
-    .hovericons .wave {
+    .hovericons .hovericon_2,
+    .hovericons .hovericon_1,
+    .hovericons .hovericon_3,
+    .hovericons .hovericon_4 {
+        width: 4em;
+        padding: 6em;
+    }
+
+    .hovericons .hovericon_2 {
         top: 0;
         right: 0;
-        width: 3em;
-        padding: 7em;
     }
 
     .circlewide {
@@ -846,11 +904,18 @@ zero #toggleDisplay video {
 
     .show-icon {
         margin-left: 8em;
-        margin-top: -1em;
+        margin-top: -.6em;
     }
+
+    .item-link.zero .show-icon {
+        top: 20.8em;
+        left: 37.9em;
+    }
+
     .close-icon {
         margin-right: 2rem;
     }
+
     .item-link.one .show-icon {
         top: 6em;
         left: 34.64em;
@@ -899,6 +964,10 @@ zero #toggleDisplay video {
     .item-link.eight .show-icon {
         top: 34em;
         left: 34.45em;
+    }
+
+    .item-link.eight .show-icon .circlemask {
+        margin-left: .9rem;
     }
 
     .textonpath {
@@ -991,11 +1060,20 @@ zero #toggleDisplay video {
         height: 24.5em;
     }
 
-    .hovericons .moon,
-    .hovericons .star,
-    .hovericons .sun, .hovericons .wave {
+    .hovericons .hovericon_1,
+    .hovericons .hovericon_3,
+    .hovericons .hovericon_4,
+    .hovericons .hovericon_2 {
         width: 2em;
         padding: 5em;
+    }
+
+
+
+
+    section#ngoymalayin {
+        width: 92%;
+        height: 64vh;
     }
 
     .zero #toggleDisplay .left {
