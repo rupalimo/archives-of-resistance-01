@@ -417,6 +417,9 @@ a {
 #toggleDisplay .left video {
     width: 80%;
     padding: 1em;
+    margin: auto;
+align-content: center;
+display: flex;
 }
 
 #toggleDisplay .top video {
@@ -489,7 +492,7 @@ a {
 
 /* video 0 */
 
-section#ngoymalayin {
+#ngoymalayin {
     width: 100%;
     height: 100vh;
     background-color: var(--background-color-1);
@@ -512,6 +515,18 @@ section#ngoymalayin {
     width: 90%;
 }
 
+#desktopbutton img:hover {
+    opacity: 87%;
+}
+
+.video-intro video {
+    width: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 15%;
+}
+
 .hidebutton {
     top: 0;
     right: 0;
@@ -520,6 +535,14 @@ section#ngoymalayin {
     border: none;
     padding: 1em;
     position: absolute;
+    cursor: pointer;
+    opacity: 42.5%;
+    font-family: var(--title-display-font);
+    letter-spacing: 0.1em;
+}
+
+.hidebutton:hover {
+    opacity: 100%;
 }
 
 .item-link.intro #introBox {
@@ -570,16 +593,22 @@ section#ngoymalayin {
 }
 
 .item-link.zero .show-icon {
-    top: 20.7em;
-    left: 36.9em;
+    top: 19.7em;
+    left: 35.89em;
     height: 2rem;
+    padding: 1em;
+    width: 2rem;
+}
+
+.item-link.zero .show-icon .circlehover {
     background-color: var(--accent-color-1);
     border: 3px solid var(--accent-color-1);
+    height: 2rem;
     width: 2rem;
     border-radius: 100%;
 }
 
-.item-link.zero .show-icon:hover {
+.item-link.zero .show-icon:hover .circlehover {
     cursor: pointer;
     color: transparent;
     background-color: transparent;
@@ -855,6 +884,26 @@ zero #toggleDisplay video {
     border-image: url(../assets/img/textura-blue.jpg) 30% round;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+footer li {
+    list-style: none;
+font-size: .5rem;
+opacity: 50%;
+}
+
+footer li a {
+    text-decoration: none;
+    color: var(--accent-color-1);
+}
+
+footer li:hover {
+    opacity: 100% !important;
+}
+
 /* large desktop positioning */
 @media screen and (min-width: 1451px) {
     h1 {
@@ -907,13 +956,16 @@ zero #toggleDisplay video {
         margin-top: -.6em;
     }
 
+    #toggleDisplay.show {
+        width: auto;}
+
     .item-link.zero .show-icon {
-        top: 20.8em;
-        left: 37.9em;
+        top: 19.8em;
+        left: 36.9em;
     }
 
     .close-icon {
-        margin-right: 2rem;
+        margin-right: 0;
     }
 
     .item-link.one .show-icon {
@@ -1006,10 +1058,10 @@ zero #toggleDisplay video {
 
 @media screen and (max-width: 830px) {
     .show-icon {
-        margin-left: -13em;
+        margin-left: -12.6em;
     }
 
-    .zerovideos .show-icon {
+    .zero .show-icon {
         margin-left: 0;
     }
 
@@ -1032,8 +1084,7 @@ zero #toggleDisplay video {
     .hovericons {
         height: 20em;
         width: 20em;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 2.5rem;
     }
 
     #toggleDisplay .left {
@@ -1046,6 +1097,14 @@ zero #toggleDisplay video {
 
     .intro .close-icon {
         left: 0;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 0;
+        right: 3rem;
+        padding: 1rem;
+        font-size: 2rem;
     }
 
     .intro #toggleDisplay video {
@@ -1067,9 +1126,6 @@ zero #toggleDisplay video {
         width: 2em;
         padding: 5em;
     }
-
-
-
 
     section#ngoymalayin {
         width: 92%;
@@ -1105,7 +1161,7 @@ zero #toggleDisplay video {
 
     .item-link.two .show-icon {
         top: 11em;
-        left: 23.7em;
+        left: 21.7em;
     }
 
     .item-link.three .show-icon {
@@ -1130,7 +1186,7 @@ zero #toggleDisplay video {
 
     .item-link.seven .show-icon {
         top: 20em;
-        left: 23.7em;
+        left: 21.7em;
     }
 
     .item-link.eight .show-icon {

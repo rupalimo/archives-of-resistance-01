@@ -18,129 +18,117 @@
 </head>
 
 <body class="ccc">
-    <section id="ngoymalayin" class="video-intro">
-        <!-- <div class="video-player mobile">
-          <video width="400px" preload="auto" controls="true">
-            <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4" />
-            <p>Your browser doesn't support HTML5 video. Here is
-              a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
-          </video>
-        </div> -->
-        <button onclick="hide()" class="hidebutton">X</button>
-        <div class="video-player desktop">
-            <video loop="true" preload="auto" playsinline="true">
+    <div>
+        <div id="ngoymalayin" class="video-intro">
+            <!-- <div class="video-player mobile">
+              <video width="400px" preload="auto" controls="true">
                 <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4" />
                 <p>Your browser doesn't support HTML5 video. Here is
-                    a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
-            </video>
-            <button id="desktopbutton"><img src="./assets/img/ngoymalayin.png" draggable="false"></button>
-        </div>
-    </section>
-    <section class="zerovideos">
-        <!-- <div class="item-link intro">
-            <div id="introBox">
-                <a class="show-icon">
-                    <div class="introDisplay">
-                        <img src="./assets/img/ngoymalayin.png">
-                    </div>
-                </a>
-                <div id="toggleDisplay" class="hide">
-                    <a class="close-icon">x</a>
-                    <video preload="none" controls controlslist="nodownload">
-                        <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4">
-                    </video>
-                </div>
+                  a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
+              </video>
+            </div> -->
+            <button class="hidebutton">enter site</button>
+            <div class="video-player desktop">
+                <video loop="false" preload="auto">
+                    <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4" />
+                    <p>Your browser doesn't support HTML5 video. Here is
+                        a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
+                </video>
+                <button id="desktopbutton"><img src="./assets/img/ngoymalayin.png" draggable="false"></button>
             </div>
-        </div> -->
-        <div class="item-link zero">
-            <a class="show-icon">.</a>
-            <div class="bg_gif"></div>
-            <div id="toggleDisplay" class="hide">
-                <div class="right"><a class="close-icon">x</a><video width="400px" preload="auto" controls="true"
-                        controlsList=”nodownload”>
-                        <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4">
-                    </video></div>
-                <div class="row">
-                    <div class="eng0">
-                        <h1>Refusing the Archive of Death</h1>
-                        <p>Ngoymalayiñ 0 is a video-performance filmed in the city of Valparaíso (Chile) where Malku
-                            Catrileo
-                            intervenes with their movements in an abandoned port shed. During the 19th century, this
-                            structure
-                            was
-                            part of Barón railway Station that transported raw materials abroad. In this performance,
-                            the
-                            phrase
-                            “ngoymalayiñ,” which in Mapuzungun means “we do not forget” is written with fire on the
-                            ground.
-                        </p>
-                        <p>
-                            This performative operation is a dialogue with the performance work carried out by the
-                            collective
-                            Las
-                            Yeguas del Apocalipsis during the 80s and 90s in Chile honoring Sebastián Acevedo. He was a
-                            mine
-                            worker
-                            who set himself on fire on November 11, 1983, as an act of protest against the disappearance
-                            of
-                            his
-                            children, who were detained by the apparatus of the military regime. The collective then
-                            updates
-                            this
-                            operation linking fire and neoprene with the HIV/AIDS crisis happening in Chile in the 90’s
-                            as a
-                            protest.
-                        </p>
-                        <p>
-                            Malku writes “ngoymalayiñ” (we do not forget) with neoprene and fire as a gesture that
-                            reinterprets
-                            and
-                            remembers these stories to question the colonial history of Valparaíso up to the present,
-                            claiming
-                            this
-                            territory otherwise: as Pikunmapu/Qullasuyu. The name that many Indigenous groups refuse to
-                            forget.
-                        </p>
-                    </div>
-                    <div class="spanish0">
-                        <h1>CONTRA EL ARCHIVO DE LA MUERTE</h1>
+        </div>
+    </div>
+    <div class="item-link zero">
+        <a class="show-icon">
+            <div class="circlehover"></div>
+        </a>
+        <div class="bg_gif"></div>
+        <div id="toggleDisplay" class="hide">
+            <div class="right"><a class="close-icon">x</a>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                    <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4">
+                </video></div>
+            <div class="row">
+                <div class="eng0">
+                    <h1>Refusing the Archive of Death</h1>
+                    <p>Ngoymalayiñ 0 is a video-performance filmed in the city of Valparaíso (Chile) where Malku
+                        Catrileo
+                        intervenes with their movements in an abandoned port shed. During the 19th century, this
+                        structure
+                        was
+                        part of Barón railway Station that transported raw materials abroad. In this performance,
+                        the
+                        phrase
+                        “ngoymalayiñ,” which in Mapuzungun means “we do not forget” is written with fire on the
+                        ground.
+                    </p>
+                    <p>
+                        This performative operation is a dialogue with the performance work carried out by the
+                        collective
+                        Las
+                        Yeguas del Apocalipsis during the 80s and 90s in Chile honoring Sebastián Acevedo. He was a
+                        mine
+                        worker
+                        who set himself on fire on November 11, 1983, as an act of protest against the disappearance
+                        of
+                        his
+                        children, who were detained by the apparatus of the military regime. The collective then
+                        updates
+                        this
+                        operation linking fire and neoprene with the HIV/AIDS crisis happening in Chile in the 90’s
+                        as a
+                        protest.
+                    </p>
+                    <p>
+                        Malku writes “ngoymalayiñ” (we do not forget) with neoprene and fire as a gesture that
+                        reinterprets
+                        and
+                        remembers these stories to question the colonial history of Valparaíso up to the present,
+                        claiming
+                        this
+                        territory otherwise: as Pikunmapu/Qullasuyu. The name that many Indigenous groups refuse to
+                        forget.
+                    </p>
+                </div>
+                <div class="spanish0">
+                    <h1>CONTRA EL ARCHIVO DE LA MUERTE</h1>
 
-                        <p>
-                            <italic>Ngoymalayiñ 0</italic> es una video-perfomance filmada en la ciudad de Valparaíso
-                            (Chile) donde Malku Catrileo interviene con sus movimientos en un galpón abandonado del
-                            puerto.
-                            Durante el siglo XIX, esta estructura formaba parte de la Estación de Ferrocarril de Barón
-                            que
-                            transportaba materias primas al exterior. En esta actuación se escribe con fuego en el suelo
-                            la
-                            frase “ngoymalayiñ”, que en mapuzungun significa “no olvidamos”.
-                        </p>
-                        <p>
-                            Esta operación performativa es un diálogo con el trabajo performático realizado por el
-                            colectivo
-                            Las Yeguas del Apocalipsis durante las décadas de los 80 y 90 en Chile en homenaje a
-                            Sebastián
-                            Acevedo. Era un minero que se prendió fuego el 11 de noviembre de 1983, como acto de
-                            protesta
-                            por la desaparición de sus hijos, quienes fueron detenidos por el aparato del régimen
-                            militar.
-                            Luego, el colectivo actualiza esta operación que vincula el fuego y el neopreno con la
-                            crisis
-                            del VIH/SIDA que atravesó Chile en los años 90 a modo de protesta.
-                        </p>
-                        <p>
-                            Malku escribe “ngoymalayiñ” (no olvidamos) con neopreno y fuego como un gesto que
-                            reinterpreta y
-                            recuerda estas historias para cuestionar la historia colonial de Valparaíso hasta el
-                            presente,
-                            reivindicando este territorio de otra manera: como Pikunmapu/Qullasuyu. El nombre que muchos
-                            grupos indígenas se niegan a olvidar.
-                        </p>
-                    </div>
+                    <p>
+                        <italic>Ngoymalayiñ 0</italic> es una video-perfomance filmada en la ciudad de Valparaíso
+                        (Chile) donde Malku Catrileo interviene con sus movimientos en un galpón abandonado del
+                        puerto.
+                        Durante el siglo XIX, esta estructura formaba parte de la Estación de Ferrocarril de Barón
+                        que
+                        transportaba materias primas al exterior. En esta actuación se escribe con fuego en el suelo
+                        la
+                        frase “ngoymalayiñ”, que en mapuzungun significa “no olvidamos”.
+                    </p>
+                    <p>
+                        Esta operación performativa es un diálogo con el trabajo performático realizado por el
+                        colectivo
+                        Las Yeguas del Apocalipsis durante las décadas de los 80 y 90 en Chile en homenaje a
+                        Sebastián
+                        Acevedo. Era un minero que se prendió fuego el 11 de noviembre de 1983, como acto de
+                        protesta
+                        por la desaparición de sus hijos, quienes fueron detenidos por el aparato del régimen
+                        militar.
+                        Luego, el colectivo actualiza esta operación que vincula el fuego y el neopreno con la
+                        crisis
+                        del VIH/SIDA que atravesó Chile en los años 90 a modo de protesta.
+                    </p>
+                    <p>
+                        Malku escribe “ngoymalayiñ” (no olvidamos) con neopreno y fuego como un gesto que
+                        reinterpreta y
+                        recuerda estas historias para cuestionar la historia colonial de Valparaíso hasta el
+                        presente,
+                        reivindicando este territorio de otra manera: como Pikunmapu/Qullasuyu. El nombre que muchos
+                        grupos indígenas se niegan a olvidar.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
     <section class="videos1_8">
         <!-- video 1 -->
         <div class="item-link one blue botfade">
@@ -184,7 +172,7 @@
                         the
                         media’s representation of the Mapuche community and the ongoing colonial violence of the Chilean
                         government. </p>
-                </div><video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                </div><video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_1.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -251,7 +239,7 @@
                         Human
                         Rights) on January 11, 2010. </p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_4.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -308,7 +296,7 @@
                         respect our ancestors.
                     </p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_8.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -351,7 +339,7 @@
                         beings that
                         also inhabit it.</p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_7.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -406,7 +394,7 @@
                         statues
                         celebrating colonizers were falling down across Chile and Abya Yala. </p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_5.mp4" type="video/mp4">
                     <p>Your browser doesn't support HTML5 video. Here is
                         a <a href="./assets/videos/ngoymalayin_5.mp4">link to the video</a> instead </p>
@@ -466,7 +454,7 @@
                         claims.
                     </p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_2.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -511,7 +499,7 @@
                         present our bodies and our textiles as writing surfaces to imagine another possible world.
                     </p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_6.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -562,7 +550,7 @@
                         our
                         communities through ongoing processes of colonization and evangelization. </p>
                 </div>
-                <video width="400px" preload="auto" controls="true" controlsList=”nodownload”>
+                <video id="vidStop" width="400px" preload="auto" controls="true" controlsList=”nodownload”>
                     <source src="./assets/videos/ngoymalayin_3.mp4" type="video/mp4">
                 </video>
                 <div class="text spanish">
@@ -585,15 +573,35 @@
     </section>
     <section class="bg">
         <div class="hovericons">
-            <div class="hovericon_1"><img src="assets/SVG/Asset_11.svg" draggable="false"></div>
-            <div class="hovericon_2"><img src="assets/SVG/star.svg" draggable="false"></div>
-            <div class="hovericon_3"><img src="assets/SVG/sun.svg" draggable="false"></div>
-            <div class="hovericon_4"><img src="assets/SVG/Asset_12.svg" draggable="false"></div>
+            <div class="hovericon_1" id="audio1"><img src="assets/SVG/Asset_11.svg" draggable="false">
+                <audio id="sound1" preload="auto" src="./assets/audio/Sound1_kultrun.mp3"></audio>
+            </div>
+
+            <div class="hovericon_2" id="audio2"><img src="assets/SVG/star.svg" draggable="false">
+                <audio id="sound2" preload="auto" src="./assets/audio/Sound2_trompe.mp3"></audio>
+            </div>
+
+            <div class="hovericon_3" id="audio3"><img src="assets/SVG/sun.svg" draggable="false">
+                <audio id="sound3" preload="auto" src="./assets/audio/Sound3_pifilca.mp3"></audio>
+            </div>
+
+            <div class="hovericon_4" id="audio4"><img src="assets/SVG/Asset_12.svg" draggable="false">
+                <audio id="sound4" preload="auto" src="./assets/audio/Sound4_kaskawilla.mp3"></audio>
+            </div>
         </div>
         </div>
         <img class="framework" src="assets/SVG/frame.svg" draggable="false">
         <img class="textonpath" src="assets/SVG/text_on_path.svg" draggable="false">
     </section>
+    <footer>
+        <ul>
+            <li>
+                <a href="http://www.tanakajpeg.com">hand-coded by E Tanaka</a>
+            </li>
+            <li><a href="../index.htm">back to Archives of Resistance</a>
+            </li>
+        </ul>
+    </footer>
     <script src="js/function.js" defer></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </body>
