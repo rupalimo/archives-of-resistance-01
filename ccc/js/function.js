@@ -6,7 +6,7 @@ if (popupLink != null) {
 		let showLink = element.querySelector(".show-icon");
 		let visBox = element.querySelector("#toggleDisplay");
 		let closeIcon = element.querySelector(".close-icon");
-		let introDiv = element.querySelector("#introBox")
+		let video = element.querySelector("#vidStop");
 
 		showLink.addEventListener("click", function () {
 			visBox.setAttribute("class", "show");
@@ -14,17 +14,18 @@ if (popupLink != null) {
 
 		closeIcon.addEventListener("click", function () {
 			visBox.setAttribute("class", "hide");
-			introDiv.setAttribute("class", "hideIntro");
+			video.pause();
 		});
 	});
 };
 
-/* Get our elements */
-var ngoymalayinVideo = document.querySelector('#ngoymalayin .video-player.desktop video');
-var ngoymalayinFullscreen = document.querySelector('#ngoymalayin .video-player.desktop #desktopbutton');
-var ngoymalayinIcon = document.querySelector('#ngoymalayin .video-player.desktop #desktopbutton img');
+/* video intro elements */
+var ngoymalayinDiv = document.querySelector('#ngoymalayin')
+var ngoymalayinVideo = document.querySelector('#ngoymalayin video');
+var ngoymalayinFullscreen = document.querySelector('#ngoymalayin #desktopbutton');
+var ngoymalayinIcon = document.querySelector('#ngoymalayin #desktopbutton img');
+var ngoymalayinClose = document.querySelector('#ngoymalayin .hidebutton');
 
-/* Build out functions */
 // toggle play/pause
 function ngoymalayintogglePlay() {
   var method = ngoymalayinVideo.paused ? 'play' : 'pause';
@@ -54,29 +55,58 @@ function ngoymalayinexitHandler() {
     ngoymalayintogglePlay();
     ngoymalayinVideo.muted = true;
     ngoymalayinVideo.controls = false;
+	ngoymalayinVideo.pause;
   } else if (document.mozFullScreen === false) {
     ngoymalayintogglePlay();
     ngoymalayinVideo.muted = true;
     ngoymalayinVideo.controls = false;
+	ngoymalayinVideo.pause;
   } else if (document.msFullscreenElement === false) {
     ngoymalayintogglePlay();
     ngoymalayinVideo.muted = true;
     ngoymalayinVideo.controls = false;
+	ngoymalayinVideo.pause;
   }
 }
 
 /* Hook up the event listeners */
 // Click events
 ngoymalayinFullscreen.addEventListener('click', ngoymalayintoggleFullscreen);
+ngoymalayinClose.addEventListener("click", function hide() {
+	ngoymalayinDiv.setAttribute("class", "hide");
+	ngoymalayinVideo.pause();
+});
+// // hide first video on click 
 
-// hide first video on click 
+// function hide() {
+//     var myClasses = document.querySelectorAll('.video-intro'),
+//         i = 0,
+//         l = myClasses.length;
 
-function hide() {
-    var myClasses = document.querySelectorAll('.video-intro'),
-        i = 0,
-        l = myClasses.length;
+//     for (i; i < l; i++) {
+//         myClasses[i].style.display = 'none';
+//     }
+// }
 
-    for (i; i < l; i++) {
-        myClasses[i].style.display = 'none';
-    }
-}
+// audio hover event
+
+var test = document.getElementById("audio1");
+    test.addEventListener("mouseover", function( event ) {   
+        var audio = document.getElementById("sound1");
+        audio.play();
+    }, false);
+    var test = document.getElementById("audio2");
+    test.addEventListener("mouseover", function( event ) {   
+        var audio = document.getElementById("sound2");
+        audio.play();
+    }, false);
+    var test = document.getElementById("audio3");
+    test.addEventListener("mouseover", function( event ) {   
+        var audio = document.getElementById("sound3");
+        audio.play();
+    }, false);
+    var test = document.getElementById("audio4");
+    test.addEventListener("mouseover", function( event ) {   
+        var audio = document.getElementById("sound4");
+        audio.play();
+    }, false);
