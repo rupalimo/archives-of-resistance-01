@@ -239,6 +239,7 @@ a {
 
 .hide {
     opacity: 0;
+    display: none;
     transition: ease-out all 200ms;
     z-index: -98 !important;
     animation-name: box-fade-out;
@@ -418,8 +419,8 @@ a {
     width: 80%;
     padding: 1em;
     margin: auto;
-align-content: center;
-display: flex;
+    align-content: center;
+    display: flex;
 }
 
 #toggleDisplay .top video {
@@ -491,6 +492,14 @@ display: flex;
 }
 
 /* video 0 */
+
+.video-intro-mobile {
+    display: none;
+}
+
+.video-player.desktop {
+    display: inline;
+}
 
 #ngoymalayin {
     width: 100%;
@@ -891,8 +900,8 @@ footer {
 
 footer li {
     list-style: none;
-font-size: .5rem;
-opacity: 50%;
+    font-size: .5rem;
+    opacity: 50%;
 }
 
 footer li a {
@@ -957,7 +966,8 @@ footer li:hover {
     }
 
     #toggleDisplay.show {
-        width: auto;}
+        width: auto;
+    }
 
     .item-link.zero .show-icon {
         top: 19.8em;
@@ -1091,6 +1101,18 @@ footer li:hover {
         max-width: 100%;
     }
 
+    .video-intro-mobile {
+        display: inline;
+    }
+
+    .video-intro-mobile video {
+        width: 100%;
+    }
+
+    .video-player.desktop {
+        display: none;
+    }
+
     .introDisplay {
         padding: 58% 10%;
     }
@@ -1155,18 +1177,36 @@ footer li:hover {
         width: 3rem;
     }
 
+    .item-link.zero .show-icon {
+        top: 14.78em;
+        left: 10.3em;
+    }
+
     .item-link.one .show-icon {
         left: 23em;
     }
 
+    .item-link.one .show-icon:hover .circlemask {
+        margin-left: -2.9rem;
+    }
+
     .item-link.two .show-icon {
         top: 11em;
-        left: 21.7em;
+        left: 23.7em;
+    }
+
+    .item-link.two .show-icon:hover .boxymask {
+        margin-left: -2.7rem;
     }
 
     .item-link.three .show-icon {
         top: 15em;
         left: 15em;
+    }
+
+    .item-link.three .show-icon:hover .circlemask {
+        margin-top: -2.79em;
+        margin-left: -2.3rem;
     }
 
     .item-link.four .show-icon {
@@ -1184,14 +1224,28 @@ footer li:hover {
         left: 32.9em;
     }
 
+    .item-link.six .show-icon:hover .circlemask {
+        margin-left: -5em;
+        margin-top: -3em;
+    }
+
     .item-link.seven .show-icon {
         top: 20em;
-        left: 21.7em;
+        left: 23.6em;
+    }
+
+    .item-link.seven .show-icon:hover .boxymask {
+        margin-left: -2.6em;
     }
 
     .item-link.eight .show-icon {
         top: 25em;
         left: 23.1em;
+    }
+
+    .item-link.eight .circlemask {
+        margin-top: -4em;
+        margin-left: -3em;
     }
 
     .item-link #toggleDisplay.show {
@@ -1204,4 +1258,5 @@ footer li:hover {
     .item-link #toggleDisplay video {
         width: 90%;
     }
+
 }
