@@ -1068,7 +1068,7 @@ footer li:hover {
 
 @media screen and (max-width: 830px) {
     .show-icon {
-        margin-left: -12.6em;
+        margin-left: -13em;
     }
 
     .zero .show-icon {
@@ -1175,6 +1175,10 @@ footer li:hover {
 
     .boxy {
         width: 3rem;
+    }
+
+    .show-icon {
+        margin-left: -12.6em;
     }
 
     .item-link.zero .show-icon {
