@@ -3,6 +3,7 @@
 
 <!-- (c) 2021 to present -->
 <!-- designed by Rupali Morzaria @shabana_asthma | last updated aug28-->
+<!-- page coded & designed by Elina Tanaka @tanaka.jpeg 2023jan26 for Archives of Resistance -->
 
 <head>
     <meta charset="utf-8">
@@ -14,27 +15,30 @@
     <meta name="description"
         content="An Online Exhibition from the Second Editions of Archives of Resistance, Northern Migration">
     <title>AOR / Ngoymalayin by CCC</title>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </head>
 
 <body class="ccc">
+    <div id="loadingscreen">
+        <img src="./assets/img/ngoymalayin.png" draggable="false">
+    </div>
+    </div>
     <div>
         <div id="ngoymalayin" class="video-intro">
             <button class="hidebutton">enter site</button>
             <div class="video-intro-mobile">
-                <video preload="auto" controls="true">
-                    <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4" />
-                    <p>Your browser doesn't support HTML5 video. Here is
-                      a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
-                  </video>
-            </div>
-            <div class="video-player desktop">
-                <video preload="auto">
+                <video preload="auto" controls controlsList="nodownload">
                     <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4" />
                     <p>Your browser doesn't support HTML5 video. Here is
                         a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
                 </video>
-                <button id="desktopbutton"><img src="./assets/img/ngoymalayin.png" draggable="false"></button>
+            </div>
+            <div class="video-player desktop">
+                <video preload="auto" controls controlsList="nodownload">
+                    <source src="./assets/videos/ngoymalayin_0.mp4" type="video/mp4" />
+                    <p>Your browser doesn't support HTML5 video. Here is
+                        a <a href="./assets/videos/ngoymalayin_0.mp4">link to the video</a> instead </p>
+                </video>
             </div>
         </div>
     </div>
