@@ -21,10 +21,11 @@ if (popupLink != null) {
 
 /* video intro elements */
 var ngoymalayinDiv = document.querySelector('#ngoymalayin')
-var ngoymalayinVideo = document.querySelector('#ngoymalayin video');
+var ngoymalayinVideo = document.querySelector('#ngoymalayin .video-player video');
 var ngoymalayinFullscreen = document.querySelector('#ngoymalayin #desktopbutton');
 var ngoymalayinIcon = document.querySelector('#ngoymalayin #desktopbutton img');
 var ngoymalayinClose = document.querySelector('#ngoymalayin .hidebutton');
+var allVideo = document.querySelector('video')
 
 // toggle play/pause
 function ngoymalayintogglePlay() {
@@ -75,6 +76,7 @@ ngoymalayinFullscreen.addEventListener('click', ngoymalayintoggleFullscreen);
 ngoymalayinClose.addEventListener("click", function hide() {
 	ngoymalayinDiv.setAttribute("class", "hide");
 	ngoymalayinVideo.pause();
+	allVideo.pause();
 });
 // // hide first video on click 
 
