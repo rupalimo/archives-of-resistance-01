@@ -518,7 +518,7 @@ section.layout+div {
   background-color: #febdff0f;
 }
 
-.collaborators article:nth-of-type(5), .collaborators article:nth-of-type(6), .collaborators article:nth-of-type(5), .collaborators article:nth-of-type(8), .collaborators article:nth-of-type(5), .collaborators article:last-of-type {
+.collaborators article:nth-of-type(4), .collaborators article:nth-of-type(5), .collaborators article:nth-of-type(4), .collaborators article:nth-of-type(7), .collaborators article:nth-of-type(4), .collaborators article:last-of-type {
   margin-bottom: 3em;
 }
 
@@ -545,10 +545,6 @@ section.layout+div {
 .card span a:hover {
   font-style: oblique;
 }
-
-.collaborators article:nth-child(2) img {}
-
-.collaborators article:nth-child(3) img {}
 
 /* 02 SCHEDULE */
 main aside a sup {
