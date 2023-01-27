@@ -505,30 +505,29 @@ a {
     width: 100%;
     height: 100vh;
     background-color: var(--background-color-1);
-    z-index: 999;
+    z-index: 98;
     position: absolute;
 }
 
-#desktopbutton {
-    background: transparent;
+
+#loadingscreen {
+    background: var(--background-color-1);
     border: none;
     position: absolute;
     z-index: 99;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    cursor: pointer;
+    top: 30%;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
 }
 
-#desktopbutton img {
+#loadingscreen img {
     width: 90%;
 }
 
-#desktopbutton img:hover {
-    opacity: 87%;
-}
 
-.video-intro video {
+.video-intro-mobile video {
     width: 50%;
     left: 50%;
     position: absolute;
@@ -536,16 +535,25 @@ a {
     top: 15%;
 }
 
+.video-player.desktop video {
+    width: 72%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 7%;
+}
+
 .hidebutton {
     top: 0;
     right: 0;
     background-color: var(--background-color-1);
+    border: 1px solid var(--accent-color-1);
     color: var(--accent-color-1);
-    border: none;
-    padding: 1em;
+    padding: .4em;
+    margin: 1rem;
     position: absolute;
     cursor: pointer;
-    opacity: 42.5%;
+    opacity: 56%;
     font-family: var(--title-display-font);
     letter-spacing: 0.1em;
 }
@@ -1099,6 +1107,12 @@ footer li:hover {
 
     #toggleDisplay .left {
         max-width: 100%;
+    }
+
+    #loadingscreen {
+        height: 100vh;
+        top: 0;
+        padding-top: 30%;
     }
 
     .video-intro-mobile {
