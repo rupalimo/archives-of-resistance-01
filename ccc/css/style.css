@@ -1109,6 +1109,12 @@ footer li:hover {
         max-width: 100%;
     }
 
+    #loadingscreen {
+        height: 100vh;
+        top: 0;
+        padding-top: 30%;
+    }
+
     .video-intro-mobile {
         display: inline;
     }
