@@ -1,7 +1,7 @@
 // loader
 
-$(window).on("load",function(){
-	$("#loadingscreen").delay(1000).fadeOut("slow");
+$(window).on("DOMContentLoaded",function(){
+	$("#loadingscreen").fadeOut("slow");
 });
 
 // Popup and closing
