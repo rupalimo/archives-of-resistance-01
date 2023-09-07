@@ -317,12 +317,18 @@ strong {
 .blink {
   animation: blink 1.5s ease-in-out infinite;
   font-family: var(--AOR-live);
+  color: var(--purple-color);
 }
 
 .landing-page aside div span+span {
   border-top: 1px dotted var(--pink-color);
   padding-top: 0.15em;
 }
+
+.landing-page aside div span.exhibition-detail {
+  font-size: 0.85em;
+}
+
 
 .landing-page aside div p, .landing-page aside div h5 {
   margin: 0;
