@@ -733,7 +733,13 @@ div.ML-gallery img:nth-child(1):hover {
 .schedule article h5 + p {
 }
 
-.schedule article p + a {
+.schedule article p + a p {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+.schedule article p + a p span {
+padding: 0 0.25em;
 }
 
 .schedule article a + a {
