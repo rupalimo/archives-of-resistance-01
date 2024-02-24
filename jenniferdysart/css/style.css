@@ -239,8 +239,24 @@ li.item-link div {
     max-width: 400px;
 }
 
+.video-player.mobile {
+    display: none;
+}
+
 /* mobile breakpoints */
 @media screen and (max-width: 925px) {
+
+    
+   .video-player.mobile {
+
+    display: none !important;
+}
+/* 
+   .video-player.mobile {
+    
+        display: block !important;
+    } */
+
     .item-link a.close-icon {
         top: 3vh;
         right: 3vh;
